@@ -39,14 +39,14 @@ const MasterForm = () => {
   return (
     <>
       <div className="masterForm">
-        {item == 0 && (
+        {item === 0 && (
           <Form1
             handleContinuar={handleContinuar}
             handleData={handleData}
             data={data}
           />
         )}
-        {item == 1 && (
+        {item === 1 && (
           <Form2
             handleVolver={handleVolver}
             handleData={handleData}

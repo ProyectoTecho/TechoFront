@@ -244,7 +244,7 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                             {/* <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button> */}
-                            <img src=""></img>
+                           
                           </div>
 
 

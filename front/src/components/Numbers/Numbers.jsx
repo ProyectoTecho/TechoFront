@@ -26,7 +26,7 @@ export default function Numbers() {
                     <span />
                     <span ref={countUpRef} />
 
-                    <h5 ref={countUpRef} className="card-title cardNumber"></h5>
+                    <h5 ref={countUpRef} className="card-title cardNumber"> {" "}</h5>
                   </div>
                 )}
               </CountUp>
@@ -50,7 +50,7 @@ export default function Numbers() {
                 {({ countUpRef }) => (
                   <div>
                     <span />
-                    <h5 ref={countUpRef} className="card-title cardNumber"></h5>
+                    <h5 ref={countUpRef} className="card-title cardNumber"> {" "}</h5>
                   </div>
                 )}
               </CountUp>
@@ -65,7 +65,7 @@ export default function Numbers() {
                 {({ countUpRef }) => (
                   <div>
                     <span />
-                    <h5 ref={countUpRef} className="card-title cardNumber"></h5>
+                    <h5 ref={countUpRef} className="card-title cardNumber">{" "}</h5>
                   </div>
                 )}
               </CountUp>
@@ -80,7 +80,7 @@ export default function Numbers() {
                 {({ countUpRef }) => (
                   <div>
                     <span />
-                    <h5 ref={countUpRef} className="card-title cardNumber"></h5>
+                    <h5 ref={countUpRef} className="card-title cardNumber">{" "}</h5>
                   </div>
                 )}
               </CountUp>
@@ -96,7 +96,7 @@ export default function Numbers() {
                 {({ countUpRef }) => (
                   <div>
                     <span />
-                    <h5 ref={countUpRef} className="card-title cardNumber"></h5>
+                    <h5 ref={countUpRef} className="card-title cardNumber">{" "}</h5>
                   </div>
                 )}
               </CountUp>
