@@ -9,7 +9,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
 
   const dispatch = useDispatch();
 
-  const [amountFlag, setAmountFlag] = useState(1000);
+  const [amountFlag, setAmountFlag] = useState("1000");
 
   // const handleRedirect = (e) => {
   //   e.preventDefault();
