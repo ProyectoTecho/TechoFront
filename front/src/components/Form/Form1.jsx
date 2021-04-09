@@ -162,7 +162,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                   </div>
                 </div>
                 {console.log(amountFlag)}
-                {amountFlag === 700 ? (
+                {amountFlag === "700" ? (
                   <div class="card border border-primary mt-3">
                     <div class="card-body text-primary">
                       Con 10 personas que donen <b>$700</b>, en un año{" "}
@@ -174,7 +174,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                     </div>
                   </div>
                 ) : null}
-                {amountFlag === 1000 ? (
+                {amountFlag === "1000" ? (
                   <div class="card border border-primary mt-3">
                     <div class="card-body text-primary">
                       Con 8 personas que donen <b>$1000</b> en un año
@@ -187,7 +187,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                     </div>
                   </div>
                 ) : null}
-                {amountFlag === 1300 ? (
+                {amountFlag === "1300" ? (
                   <div class="card border border-primary mt-3">
                     <div class="card-body text-primary">
                       Con tu donación de <b>$1300</b> por 6 meses, logramos
