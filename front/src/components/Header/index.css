@@ -1,0 +1,8 @@
+.imagen{
+    background-image: url(https://www.techo.org/UY/assets/images/background/header.jpg) ;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    bottom: center;
+}

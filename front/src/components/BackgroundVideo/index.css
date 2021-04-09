@@ -1,0 +1,11 @@
+@media (max-width: 600px) {
+    video {
+      display: none;
+    }
+}
+
+@media (min-width: 600px) {
+    .img-header {
+      display: none;
+    }
+}

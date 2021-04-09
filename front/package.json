@@ -1,0 +1,62 @@
+{
+  "homepage": "https://diejofre.github.io/Techo",
+  "name": "techo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.5.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "bootstrap": "5.0.0-alpha1",
+    "bootstrap-icons": "^1.4.0",
+    "install": "^0.13.0",
+    "jquery": "^3.6.0",
+    "node-sass": "^5.0.0",
+    "popper.js": "^1.16.1",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.5.2",
+    "react-countup": "^4.3.3",
+    "react-dom": "^17.0.2",
+    "react-ga": "^3.3.0",
+    "react-redux": "^7.2.3",
+    "react-responsive-carousel": "^3.2.18",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-scroll": "^1.8.2",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "proxy": "http://localhost:8080",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}

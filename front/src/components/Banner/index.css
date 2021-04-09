@@ -1,0 +1,13 @@
+.texto-aporte{
+    background-color: rgb(0, 146, 221);
+    color: white;
+    min-height: 100px;
+    /* line-height: 95px; */
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+   margin-bottom: 5%;
+   margin-top: 20%;
+   font-size: x-large;
+   
+}

@@ -1,0 +1,70 @@
+
+
+.singleButton {
+    width: 90px;
+    height: 65px;
+    border-radius: 20px;
+    color: white;
+    background-color: #EA6D4F;
+    margin: 5px;
+    font-size: x-large;
+}
+
+.containerColumns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.titles{
+    color: rgb(0, 146, 221);
+    margin-right: 10px;
+}
+
+.mercadoPago {
+    display: flex;
+    flex-direction: row;
+}
+.logoMP{
+    width:40px;
+    height:40px;
+}
+.p {
+    line-height: 0.2;
+}
+
+.divMercadoPago {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.imagen {
+    width: 100%;
+} 
+/* .donacionHover:hover {
+    background-color: rgb(215, 142, 1);
+    transition: 0.4s;
+  } */
+
+
+  @media (max-width: 600px) {
+    .singleButton {
+        width: 60px;
+        height: 35px;
+        margin: 5px;
+        font-size: small;
+    }
+
+    .titles{
+        font-size: 14px;
+    }
+
+    .parrafo {
+        font-size: 10px;
+    }
+    .logoMP{
+        width:20px;
+        height:20px;
+    }
+  }

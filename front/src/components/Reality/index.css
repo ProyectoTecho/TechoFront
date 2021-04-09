@@ -1,0 +1,46 @@
+.card-title2{
+
+    border: none;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    font-size: 30px;
+    background: #ea6d4f;
+    line-height: 150px;
+    color: white;
+    font-weight: bolder;
+    margin-left: 22%;
+    @media(max-width: 767px;){
+        margin-left: 20%
+    }
+
+}
+
+.card-title2:hover{
+    background-color: #e66444;
+    -webkit-transform: scale(1.1);
+    transition: 0.3s;
+}
+
+card-body{
+    text-align: center;
+    border: none;
+}
+
+.s-img{
+    /* height: 50% !important;
+    width: 70%  !important;   si aplicamos la medida pierde alineacion al centro*/
+    display: flex;
+    text-align: center !important;
+    
+}
+
+.img-reality{
+    border: none !important;
+}
+
+.reality-center{
+    text-align: center;
+    margin-bottom: 10%;
+}
+
