@@ -1,8 +1,6 @@
 import React from "react";
 import "./index.css";
 import { Link } from "react-scroll";
-import imagen from "../../assets/construccion.jpg"
-import video from "../../assets/institucional.mp4"
 import BackgroundVideo from "../BackgroundVideo/BackgroundVideo"
 
 export default function Header() {

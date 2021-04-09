@@ -1,22 +1,11 @@
 import React, { useEffect } from "react";
-import { useInput } from "../../hooks/useInput";
-import { useHistory } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { postData } from "../../state/reducers/user";
 import ReactGA from "react-ga";
 
 const Form2 = ({ handleVolver, handleData, data }) => {
-  const history = useHistory();
   const dispatch = useDispatch();
-  const DNI = useInput("DNI");
-  const provincia = useInput("provincia");
-  const numTarjeta = useInput("numTarjeta");
-  const tipoTarjeta = useInput("tipoTarjeta");
 
-  //   const handleClick = (e) => {
-  //     e.preventDefault();
-  //     handleVolver
-  //   };
 
   useEffect(() => {
     ReactGA.initialize("UA-26808512-1");
@@ -53,7 +42,7 @@ const Form2 = ({ handleVolver, handleData, data }) => {
               <img
                 src="https://institucional.techo.org/wp-content/uploads/sites/8/2018/02/home-foto-mobile1.jpg"
                 className="img-fluid"
-                alt="Responsive image"
+                alt="Responsive"
               />
             </div>
             <div className="col-md-8">

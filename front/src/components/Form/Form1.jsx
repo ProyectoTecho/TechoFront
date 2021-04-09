@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import { useHistory, Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { postData } from "../../state/reducers/user";
-import { useInput } from "../../hooks/useInput";
+
 import "./index.css";
 import SinglePayment from "../SinglePayment/SinglePayment";
 
-const Form1 = ({ handleCallback, handleContinuar, handleData, data }) => {
-  const history = useHistory();
+const Form1 = ({ handleContinuar, handleData, data }) => {
+
   const dispatch = useDispatch();
 
   const [amountFlag, setAmountFlag] = useState(1000);
@@ -82,7 +81,7 @@ const Form1 = ({ handleCallback, handleContinuar, handleData, data }) => {
             <img
               src="https://institucional.techo.org/wp-content/uploads/sites/8/2018/02/home-foto-mobile1.jpg"
               className="img-fluid"
-              alt="Responsive image"
+              alt="Responsive"
             />
           </div>
 

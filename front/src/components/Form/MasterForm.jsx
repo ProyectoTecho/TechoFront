@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Header from "../Header/Header";
-import CarrouselTestimony from "../CarrouselTestimony/CarrouselTestimony";
 import Form1 from "./Form1";
 import Form2 from "./Form2";
 
