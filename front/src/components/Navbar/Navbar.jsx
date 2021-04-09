@@ -53,23 +53,23 @@ export default function Navbar() {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <a className="nav-link text-white whiteHover">
+            <span className="nav-link text-white whiteHover">
               Inicio <span className="sr-only">(current)</span>
-            </a>
+            </span>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-white whiteHover">
+            <span className="nav-link text-white whiteHover">
               <Link to="testimonios" smooth duration={1000}>
                 Testimonios
               </Link>
-            </a>
+            </span>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-white whiteHover">
+            <span className="nav-link text-white whiteHover">
               <Link to="contacto" smooth duration={1000}>
                 Contacto
               </Link>
-            </a>
+            </span>
           </li>
           <li className="nav-item dropdown"></li>
         </ul>
