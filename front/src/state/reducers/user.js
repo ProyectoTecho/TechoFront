@@ -10,7 +10,7 @@ export const setUser = createAction('SET_USER')
 export const postData = createAsyncThunk(
   "CREATE_USER",
   ({ name, lastname, email, phone, amount, time, dni, province, creditCard, typeCard}) => {
-    return axios.post(`https://cors-anywhere.herokuapp.com/https://proyectotecho.herokuapp.com/api/user`, {
+    return axios.post(`https://proyectotecho.herokuapp.com/api/user`, {
       name,
       lastname,
       email,
@@ -37,3 +37,5 @@ const userReducer = createReducer([], {
 });
 
 export default userReducer;
+
+/* https://cors-anywhere.herokuapp.com */
