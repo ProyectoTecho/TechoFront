@@ -38,4 +38,3 @@ const userReducer = createReducer([], {
 
 export default userReducer;
 
-/* https://cors-anywhere.herokuapp.com */
