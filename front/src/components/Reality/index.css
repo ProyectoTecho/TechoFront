@@ -1,46 +1,61 @@
-.card-title2{
-
-    border: none;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    font-size: 30px;
-    background: #ea6d4f;
-    line-height: 150px;
-    color: white;
-    font-weight: bolder;
-    margin-left: 22%;
-    @media(max-width: 767px;){
-        margin-left: 20%
-    }
-
+.card-title2 {
+  border: none;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  font-size: 50px;
+  background: #ea6d4f;
+  line-height: 150px;
+  color: white;
+  font-weight: bolder;
+  margin-left: 22%;
 }
 
-.card-title2:hover{
-    background-color: #e66444;
-    -webkit-transform: scale(1.1);
-    transition: 0.3s;
+@media (min-width: 1600px) { /* hecho exclusivamente para la pantalla de MAURO */
+  .card-title2 {
+    font-size: 80px;
+    width: 200px;
+    height: 200px;
+    line-height: 190px;
+    margin-right: 5%;
+  }
+  .reality-text {
+    font-size: 2em; /* hecho exclusivamente para la pantalla de MAURO */
+  }
 }
 
-card-body{
-    text-align: center;
-    border: none;
+.card-title2:hover {
+  background-color: #e66444;
+  -webkit-transform: scale(1.4);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.s-img{
-    /* height: 50% !important;
+card-body {
+  text-align: center;
+  border: none;
+}
+
+.s-img {
+  /* height: 50% !important;
     width: 70%  !important;   si aplicamos la medida pierde alineacion al centro*/
-    display: flex;
-    text-align: center !important;
-    
+  display: flex;
+  text-align: center !important;
 }
 
-.img-reality{
-    border: none !important;
+.img-reality {
+  border: none !important;
 }
 
-.reality-center{
-    text-align: center;
-    margin-bottom: 10%;
+.reality-center {
+  text-align: center;
+  margin-bottom: 10%;
 }
 
+.reality-text{
+    font-size: 1.2em;
+}
+
+
+   
+
+  

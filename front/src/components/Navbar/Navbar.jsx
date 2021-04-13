@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import logotecho from "../../assets/logotecho.png";
 import "./index.css";
 
 window.onscroll = function () {
@@ -24,10 +25,11 @@ export default function Navbar() {
       className="navbar navbar-expand-lg navbarProp navbar-dark"
       id="header"
     >
-      <a className="navbar-brand" href="http://localhost:3000/">
+      <a className="navbar-brand logo-techo-margin" href="https://www.techo.org/">
         <img
-          src="https://www.techo.org/UY/assets/images/logo_1.png"
+          src={logotecho}
           alt="techo"
+          className='img-logo-size'
         />
 
         {/* segunda imagen que cambia de color al hacer scroll */}
@@ -52,19 +54,19 @@ export default function Navbar() {
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
+          <li className="nav-item active ">
             <span className="nav-link text-white whiteHover">
               Inicio <span className="sr-only">(current)</span>
             </span>
           </li>
-          <li className="nav-item">
+          <li className="nav-item ">
             <span className="nav-link text-white whiteHover">
               <Link to="testimonios" smooth duration={1000}>
                 Testimonios
               </Link>
             </span>
           </li>
-          <li className="nav-item">
+          <li className="nav-item ">
             <span className="nav-link text-white whiteHover">
               <Link to="contacto" smooth duration={1000}>
                 Contacto

@@ -1,18 +1,18 @@
 import React from "react";
 import "./index.css";
+import logoTecho from "../../assets/logotecho.png";
 
 export default function Footer() {
   return (
     <div className="bg-primary" id="contacto">
       <div className="container">
         <div className="container-fluid bg-primary">
-          <div className="row">
-           
-              <div className="col-md-4 mt-4">
+          <div className="row">           
+              <div className="col-md-4 mt-4 alinear-footer">
                 <img
-                  src="https://www.techo.org/wp-content/uploads/2018/02/techo-footer.png"
-                  alt="logo de techo "
-                  className="img-fluid ml-4 mt-3 "
+                  src={logoTecho}
+                  alt="logo de techo " /* acomodar tamaño y alineación del logo de TECHOO */
+                  className="img-fluid logo-footer mt-3 "
                 />
                 <div className="items ml-4">
                   <a

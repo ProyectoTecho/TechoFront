@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { postData } from "../../state/reducers/user";
 import ReactGA from "react-ga";
+import fotoForm from "../../assets/foto-form.jpg";
 
 const Form2 = ({ handleVolver, handleData, data }) => {
   const dispatch = useDispatch();
@@ -40,7 +41,7 @@ const Form2 = ({ handleVolver, handleData, data }) => {
           <div className="row g-0">
             <div className="col-md-4">
               <img
-                src="https://institucional.techo.org/wp-content/uploads/sites/8/2018/02/home-foto-mobile1.jpg"
+                src={fotoForm}
                 className="img-fluid"
                 alt="Responsive"
               />
