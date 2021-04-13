@@ -1,6 +1,5 @@
 import React from "react";
 import "./index.css";
-import { Link } from "react-scroll";
 import BackgroundVideo from "../BackgroundVideo/BackgroundVideo"
 
 export default function Header() {
