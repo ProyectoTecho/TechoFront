@@ -67,8 +67,17 @@
     margin-top: 20px;
     display: flex;
     flex-direction: row;
+    
 }
 
 .inputWidth {
     width: 100px;
 }
+
+.logo-footer{
+    height: auto;
+    width: auto;
+    
+}
+
+
