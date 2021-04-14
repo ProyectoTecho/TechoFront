@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { postData } from "../../state/reducers/user";
-
+import { Link } from "react-scroll";
 import "./index.css";
 import SinglePayment from "../SinglePayment/SinglePayment";
+import fotoForm from "../../assets/foto-form.jpg";
 
 const Form1 = ({ handleContinuar, handleData, data }) => {
 
@@ -74,12 +75,12 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
   };
 
   return (
-    <div className="container" id="dona">
+    <div className="container" >
       <div className="card mb-3">
         <div className="row g-0">
           <div className="col-md-4">
             <img
-              src="https://institucional.techo.org/wp-content/uploads/sites/8/2018/02/home-foto-mobile1.jpg"
+              src={fotoForm}
               className="img-fluid"
               alt="Responsive"
             />
@@ -89,7 +90,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
             <div className="card-body">
               <div className="row">
                 <div className="col-6">
-                  <h5 className="card-title">Doná</h5>
+                  <h5 className="card-title" >Doná</h5>
                 </div>
                 <div className="col-6 text-right">
                   <h6>Paso 1/2</h6>
@@ -100,7 +101,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                   Seleccioná el monto con el cual te querés sumar mensualmente
                 </p>
               </div>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} id="dona">
                 <div className="btn-toolbar mt-3" role="toolbar">
                   <div className="btn-group me-2 mr-3" role="group">
                     <button
@@ -250,16 +251,16 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                       required
                     />
                   </div>
-                </div>
-                <button 
-                disabled={data.name === '' || data.lastname === '' || data.amount === '' || data.phone === '' || data.email === '' ?
-                true
-                :
-                false}
-                type="submit" className="btn btn-primary mt-4">
-                  Continuar
-                  
-                </button>
+                </div>                
+                  <button 
+                  disabled={data.name === '' || data.lastname === '' || data.amount === '' || data.phone === '' || data.email === '' ?
+                  true
+                  :
+                  false}
+                  type="submit" className="btn btn-primary mt-4">
+                    Continuar
+                    
+                  </button>                
               </form>
               <p className="mt-5">
                 {" "}
@@ -316,6 +317,20 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
           </div>
         </div>
       </div>
+      {/* ternario que oculta el botón si hay algún input dentro del formulario */}
+      {data.name !== '' || data.lastname !== ''  || data.phone !==  '' || data.email !==  '' ? 
+      null
+      :
+      <div className="botonDona">
+        <span className=" ">
+          <Link to="dona" smooth duration={1000}>
+            <button className="btn btnHover" type="submit">
+              <span className="letraBtn ">Doná</span>
+            </button>
+          </Link>
+        </span>
+      </div>
+      }
     </div>
   );
 };

@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./index.css";
+import logoTecho from "../../assets/logotecho.png";
 
 export default function Footer() {
   const [data, setData] = useState({
@@ -27,25 +28,21 @@ export default function Footer() {
 
   return (
     <div className="bg-primary" id="contacto">
-      <div className="container">
+      <div className="">
         <div className="container-fluid bg-primary">
-          <div className="row">
-            <div className="col-md-4 mt-4">
-              <img
-                src="https://www.techo.org/wp-content/uploads/2018/02/techo-footer.png"
-                alt="logo de techo "
-                className="img-fluid ml-4 mt-3 "
-              />
-              <div className="items ml-4">
-                <a
-                  href="https://www.facebook.com/TECHOargentina/"
-                  target="blank"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    className="bi bi-facebook iconItem"
+          <div className="row">           
+              <div className="col-md-4 mt-4 ">
+                <img
+                  src={logoTecho}
+                  alt="logo de techo " /* acomodar tamaño y alineación del logo de TECHOO */
+                  className="img-fluid logo-footer mt-3 "
+                />
+                <div className="items ml-4">
+                  <a
+                    href="https://www.facebook.com/TECHOargentina/"
+                    target="blank"
                   >
+                    <svg>
                     <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
                   </svg>
                 </a>
@@ -112,7 +109,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="col-md-8" id="contacto ">
+            <div className="col-md-8 " id="contacto ">
               <h3 className="text-center text-white mb-3 mt-3">CONTACTO</h3>
               <form
                 action="https://formspree.io/f/xzbyblnd"

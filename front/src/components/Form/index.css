@@ -102,14 +102,12 @@ input[type=number]::-webkit-outer-spin-button {
 
 .modalThanks{
     background-color: #000000;
-    /* background-image: url('foto.JPG'); */
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('foto.JPG');
     border: 10px solid;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-
     color: white;
-    height: 400px;
+    min-width:300px;
 }
 
 .modalHeader{
@@ -120,6 +118,10 @@ input[type=number]::-webkit-outer-spin-button {
 .modalFooter{
     display: flex;
     justify-content: flex-end;
+}
+
+.modal-altura{
+    height: 80vh;
 }
 
 .descriptivo{

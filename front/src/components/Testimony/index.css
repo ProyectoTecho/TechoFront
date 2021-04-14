@@ -1,0 +1,23 @@
+.cardBox-testimony {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgb(0, 146, 221);
+  background-clip: border-box;
+  color: white;
+  padding-top: 2%;
+  justify-content: center;
+}
+.lightblue-title{
+  color: rgb(0, 146, 221);
+  margin-left: 3%;
+}
+
+.img-testimony-hover:hover {
+  -webkit-transform: scale(1.08);
+  transition: transform 1.0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: saturate(140%);
+  filter: brightness(1.2);
+}
