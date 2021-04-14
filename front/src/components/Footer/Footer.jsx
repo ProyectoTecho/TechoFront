@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 import "./index.css";
 import logoTecho from "../../assets/logotecho.png";
 
