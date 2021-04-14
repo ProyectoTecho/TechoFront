@@ -15,13 +15,14 @@ export default function Footer() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    //e.preventDefault();
     axios
       .post("https://proyectotecho.herokuapp.com/api/send-mail", {
         nombre: data.nombre,
         email: data.email,
       })
-      .then(() => alert("algo"));
+      // .then(() => axios.post("https://formspree.io/f/xzbyblnd"))
+      .then(() => console.log("nos vamos a comunicar con vos"));
   };
 
   console.log(data);
@@ -30,19 +31,23 @@ export default function Footer() {
     <div className="bg-primary" id="contacto">
       <div className="">
         <div className="container-fluid bg-primary">
-          <div className="row">           
-              <div className="col-md-4 mt-4 ">
-                <img
-                  src={logoTecho}
-                  alt="logo de techo " /* acomodar tamaño y alineación del logo de TECHOO */
-                  className="img-fluid logo-footer mt-3 "
-                />
-                <div className="items ml-4">
-                  <a
-                    href="https://www.facebook.com/TECHOargentina/"
-                    target="blank"
+          <div className="row">
+            <div className="col-md-4 mt-4 ">
+              <img
+                src={logoTecho}
+                alt="logo de techo " /* acomodar tamaño y alineación del logo de TECHOO */
+                className="img-fluid logo-footer mt-3 "
+              />
+              <div className="items ml-4">
+                <a
+                  href="https://www.facebook.com/TECHOargentina/"
+                  target="blank"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    className="bi bi-facebook iconItem"
                   >
-                    <svg>
                     <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
                   </svg>
                 </a>
@@ -116,19 +121,19 @@ export default function Footer() {
                 method="POST"
                 onSubmit={handleSubmit}
               >
-                <div className="row mb-3 ml-5">
+                <div className="row mb-3 ">
                   <div className="col-sm-6">
                     <input
                       name="nombre"
                       type="text"
-                      className="form-control w-75 mb-2 ml-3"
+                      className="form-control w-90 mb-2 "
                       placeholder="Nombre"
                       onChange={handleData}
                     />
                     <input
                       name="email"
                       type="email"
-                      className="form-control w-75 mb-2 ml-3 "
+                      className="form-control w-90 mb-2  "
                       placeholder="Email"
                       onChange={handleData}
                     />
@@ -137,19 +142,16 @@ export default function Footer() {
                     <input
                       name="telefono"
                       type="text"
-                      className="form-control w-75 mb-2 ml-3"
+                      className="form-control w-90 mb-2 "
                       placeholder="Teléfono"
                     />
 
                     <select
-                      className="form-select mb-3 w-75 ml-3 "
+                      className="form-select mb-3 w-90 "
                       aria-label="Default select example"
                       name="info-contacto"
                     >
-                      <option
-                        value="Quiero conocer más sobre el programa de viviendas"
-                        selected
-                      >
+                      <option value="Quiero conocer más sobre el programa de viviendas" selected>
                         Quiero conocer más sobre el programa de viviendas
                       </option>
                       <option value="Quiero hacer una donación">
@@ -165,11 +167,7 @@ export default function Footer() {
                   </div>
                 </div>
                 <div className="formButton">
-                  <input
-                    type="submit"
-                    className="buttonSend"
-                    // onClick={handleMail}
-                  />
+                  <button type="submit" className="buttonSend">ENVIAR</button>
                 </div>
               </form>
             </div>
