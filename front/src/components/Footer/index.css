@@ -51,6 +51,12 @@
     color: white;
 }
 
+.buttonSend:hover{
+    background-color: #f1542d;
+    transition: 1.2s;
+    -webkit-transform: scale(1.2);
+}
+
 .column1 {
     display: flex;
     flex-direction: column;
@@ -60,14 +66,14 @@
 .iconItem {
     color: white;
     width: 50px;
-    height: 35px;
+        height: 35px;
 }
 
 .items {
     margin-top: 20px;
     display: flex;
     flex-direction: row;
-    
+    justify-content: center;
 }
 
 .inputWidth {

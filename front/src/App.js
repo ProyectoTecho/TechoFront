@@ -8,7 +8,7 @@ import Reality from "./components/Reality/Reality";
 
 import Numbers from "./components/Numbers/Numbers";
 
-import Testimony from "./components/CarrouselTestimony/Testimony";
+import Testimony from "./components/Testimony/Testimony";
 
 import { Banner1 } from "./components/Banner/Banner1";
 

@@ -5,10 +5,10 @@ import logoTecho from "../../assets/logotecho.png";
 export default function Footer() {
   return (
     <div className="bg-primary" id="contacto">
-      <div className="container">
+      <div className="">
         <div className="container-fluid bg-primary">
           <div className="row">           
-              <div className="col-md-4 mt-4 alinear-footer">
+              <div className="col-md-4 mt-4 ">
                 <img
                   src={logoTecho}
                   alt="logo de techo " /* acomodar tamaño y alineación del logo de TECHOO */
@@ -91,30 +91,30 @@ export default function Footer() {
               </div>
           
 
-            <div className="col-md-8" id="contacto ">
+            <div className="col-md-8 " id="contacto ">
               <h3 className="text-center text-white mb-3 mt-3">CONTACTO</h3>
-              <div className="row mb-3 ml-5">
+              <div className="row mb-3 ">
                 <div className="col-sm-6">
                   <input
                     type="text"
-                    className="form-control w-75 mb-2 ml-3"
+                    className="form-control w-90 mb-2 "
                     placeholder="Nombre"
                   />
                   <input
                     type="email"
-                    className="form-control w-75 mb-2 ml-3 "
+                    className="form-control w-90 mb-2  "
                     placeholder="Email"
                   />
                 </div>
                 <div className="col-sm-6">
                   <input
                     type="text"
-                    className="form-control w-75 mb-2 ml-3"
+                    className="form-control w-90 mb-2 "
                     placeholder="Teléfono"
                   />
 
                   <select
-                    className="form-select mb-3 w-75 ml-3 "
+                    className="form-select mb-3 w-90 "
                     aria-label="Default select example"
                     name="info-contacto"
                   >

@@ -1,11 +1,26 @@
 .cardNumber {
-    font-size: 36px;
+    font-size: 80px;
     text-align: center;
 }
 
+.cardNumber:hover {
+    font-size: 80px;
+    text-align: center;
+    -webkit-transform: scale(1.5);
+    transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+
+@media (max-width: 300px){
+    .cardNumber{
+        font-size: 45px;
+    }
+}
 .cardText {
     font-size: 20px;
     text-align: center;
+
 }
 
 .cardBox {
@@ -14,17 +29,26 @@
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border-radius: 0.25rem;
-}
-
-.cardBackground {
     background-color: rgb(0, 146, 221);
+    background-clip: border-box;
     color: white;
+    
 }
 
 .title {
     display: flex ;
     justify-content: center;
+    font-weight: bolder;
+    font-size: 90px;
 }
+
+@media(max-width: 700px){
+    .title {
+        font-size: 46px;
+    }
+}
+
+.number-size{
+    font-size: 1000px !important;
+}
+
