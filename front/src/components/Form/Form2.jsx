@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { postData } from "../../state/reducers/user";
 import ReactGA from "react-ga";
-import fotoForm from "../../assets/foto-form.jpg";
+import fotoForm from "../../assets/Foto_nene.jpeg";
 
 const Form2 = ({ handleVolver, handleData, data }) => {
   const dispatch = useDispatch();

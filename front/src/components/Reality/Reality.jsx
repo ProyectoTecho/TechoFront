@@ -6,7 +6,7 @@ const Reality = () => {
     <>
       <div className="container-fluid reality-center">
       <h2 className="title reality-title">Realidad 
-        <span className='lightblue-title'>Argentina</span>
+        Argentina
       </h2>
         <div className="row">
           <div className="card img-reality col-lg-3 col-sm-6 col-xs-12">

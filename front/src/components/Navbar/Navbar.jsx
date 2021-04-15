@@ -75,17 +75,6 @@ export default function Navbar() {
           </li>
           <li className="nav-item dropdown"></li>
         </ul>
-        {/*     <div className="botonDona">
-        <span className=" btnHover">
-          <Link to="dona" smooth duration ={1000}>
-          <button className="btn" type="submit" >
-            <span className="letraBtn">Doná</span>
-            
-          </button>
-        
-          </Link>
-        </span>
-        </div> */}
       </div>
     </nav>
   );

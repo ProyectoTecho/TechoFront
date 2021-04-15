@@ -11,7 +11,7 @@ export default function Testimony() {
     <div className="" id="testimonios">   
       <div className="justify-content-md-center mb-5">
         <h2 className="title">Nuestros 
-          <span className='lightblue-title'>Testimonios</span> 
+          Testimonios
         </h2>
         <div className="row  justify-content-md-center mt-5">
           <div className="cardBox-testimony col-md-3 col-sm-6">

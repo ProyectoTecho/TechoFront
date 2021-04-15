@@ -7,7 +7,6 @@
 }
 
 .botonDona {
-
   color: white;
   border-radius: 10px;
   border: 1px solid;
@@ -31,22 +30,6 @@
   }
 }
 
-/* .botonDona2{
-  
-   
-    color: white;
-    background-color: #ea6d4f;
-    opacity: 0.9;
-    border-radius: 10px;
-    border: 1px solid;
-    font-size: 16px;
-    position: fixed;
-    z-index: 2;
-    right: 20px;
-    bottom: 30px;
-
-}
- */
 .btnHover:hover {
   background-color: rgb(215, 142, 1);
   transition: 0.4s;
@@ -57,9 +40,6 @@
 .letraBtn {
   color: white;
   text-transform: uppercase;
-  
-  
- 
 }
 
 #header {
@@ -69,7 +49,6 @@
   background-color: transparent;
   text-align: center;
   font-weight: bold;
-  position: fixed;
   top: 0;
   transition: 0.2s;
 }
@@ -102,7 +81,7 @@
 }
 
 .logo-techo-margin{
-  margin-left: 5%;
+  padding-left: 5%;
   
 }
 

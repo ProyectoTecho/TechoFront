@@ -1,22 +1,20 @@
 .cardNumber {
-    font-size: 80px;
+    font-size: 60px;
     text-align: center;
 }
-
-.cardNumber:hover {
-    font-size: 80px;
-    text-align: center;
-    -webkit-transform: scale(1.5);
-    transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-
 
 @media (max-width: 300px){
     .cardNumber{
         font-size: 45px;
     }
 }
+.cardNumber:hover {
+    font-size: 60px;
+    text-align: center;
+    -webkit-transform: scale(1.2);
+    transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 .cardText {
     font-size: 20px;
     text-align: center;
@@ -39,16 +37,53 @@
     display: flex ;
     justify-content: center;
     font-weight: bolder;
-    font-size: 90px;
+    font-size: 70px;
 }
 
-@media(max-width: 700px){
+@media(min-width: 0px) and (max-width: 375px){ 
     .title {
-        font-size: 46px;
+        font-size: 40px;
+    }
+    .cardNumber{
+       font-size: 35px; 
+    }
+    .cardNumber:hover {
+        font-size: 35px;
+        text-align: center;
+        -webkit-transform: scale(1.2);
+        transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 }
 
-.number-size{
-    font-size: 1000px !important;
+@media(min-width: 376px) and (max-width:768px){
+    .title {
+        font-size: 45px;
+   
+    }
+    .cardNumber{
+        font-size: 40px; 
+     }
+     .cardNumber:hover {
+         font-size: 40px;
+         text-align: center;
+         -webkit-transform: scale(1.2);
+         transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+     }
 }
+
+@media(min-width: 768px) and (max-width: 1400px){
+    .title {
+        font-size: 50px;
+    }
+    .cardNumber{
+        font-size: 45px; 
+     }
+     .cardNumber:hover {
+         font-size: 45px;
+         text-align: center;
+         -webkit-transform: scale(1.2);
+         transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+     }
+}
+
 
