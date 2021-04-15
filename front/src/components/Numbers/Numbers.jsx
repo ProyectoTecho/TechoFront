@@ -7,10 +7,10 @@ export default function Numbers() {
 
   return (
     <>
-      <div className="justify-content-md-center mb-5" >
+      <div className="justify-content-md-center mb-5 background-numbers" >
         <h2 className="title">Cifras TECHO</h2>
         <div className="row justify-content-md-center mt-5 ">
-          <div className="cardBox col-xl-6">
+          <div className="cardBox col-xl-4">
             <div className="card-body ">
               <CountUp
                 start={0}
@@ -38,15 +38,44 @@ export default function Numbers() {
               </p>
             </div>
           </div>
-          <div className="cardBox col-xl-6">
-            <div className="card-body">
+          <div className="cardBox col-xl-4">
+            <div className="card-body ">
               <CountUp
                 start={0}
-                end={15.644}
+                end={15.600}
                 delay={0}
                 duration={4}
                 decimal="."
                 decimals={3}
+                prefix="+"
+                className=''
+              >
+                {({ countUpRef }) => (
+                  <div>
+                    <span />
+                    <span ref={countUpRef} />
+
+                    <h5 ref={countUpRef} className="card-title cardNumber"> {" "}</h5>
+                  </div>
+                )}
+              </CountUp>
+              <p className="cardText">
+                {" "}
+                voluntarios/as que se movilizaron en Argentina en construcciones
+                y eventos masivos
+              </p>
+            </div>
+          </div>
+          <div className="cardBox col-xl-4">
+            <div className="card-body">
+              <CountUp
+                start={0}
+                end={25.000}
+                delay={0}
+                duration={4}
+                decimal="."
+                decimals={3}
+                prefix="+"
               >
                 {({ countUpRef }) => (
                   <div>
@@ -56,13 +85,13 @@ export default function Numbers() {
                 )}
               </CountUp>
               <p className="cardText">
-                viviendas de emergencia construidas en asentamientos.
+                socios/as que comparten nuestra visión
               </p>
             </div>
           </div>
           <div className="cardBox col-xl-4 ">
             <div className="card-body">
-              <CountUp start={0} end={693} delay={0} duration={4}>
+              <CountUp start={0} end={690} delay={0} duration={4}  prefix="+">
                 {({ countUpRef }) => (
                   <div>
                     <span />
@@ -71,13 +100,13 @@ export default function Numbers() {
                 )}
               </CountUp>
               <p className="cardText">
-                voluntarios/as realizan un trabajo permanente en los barrios.
+                voluntarios/as realizan un trabajo permanente en los barrios
               </p>
             </div>
           </div>
           <div className="cardBox col-xl-4">
             <div className="card-body ">
-              <CountUp start={0} end={81} delay={0} duration={6}>
+              <CountUp start={0} end={80} delay={0} duration={6}  prefix="+">
                 {({ countUpRef }) => (
                   <div>
                     <span />
@@ -87,7 +116,7 @@ export default function Numbers() {
               </CountUp>
               <p className="cardText">
                 asentamientos en donde estamos trabajando, 58 de ellos con mesas
-                de trabajo activas.
+                de trabajo activas
               </p>
             </div>
           </div>
@@ -102,7 +131,7 @@ export default function Numbers() {
                 )}
               </CountUp>
               <p className="cardText">
-                proyectos de infraestructura y mejoramiento de hábitat.
+                proyectos de infraestructura y mejoramiento de hábitat
               </p>
             </div>
           </div>
