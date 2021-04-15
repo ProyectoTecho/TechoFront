@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { postData } from "../../state/reducers/user";
 import ReactGA from "react-ga";
-import fotoForm from "../../assets/foto-form.jpg";
+import fotoForm from "../../assets/foto-form.jpeg";
 
 const Form2 = ({ handleVolver, handleData, data }) => {
   const dispatch = useDispatch();
@@ -40,7 +40,7 @@ const Form2 = ({ handleVolver, handleData, data }) => {
         <div className="card mb-3">
           <div className="row g-0">
             <div className="col-md-4">
-              <img
+              <amp-img 
                 src={fotoForm}
                 className="img-fluid"
                 alt="Responsive"
