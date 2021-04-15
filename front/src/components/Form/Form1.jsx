@@ -4,28 +4,13 @@ import { postData } from "../../state/reducers/user";
 import { Link } from "react-scroll";
 import "./index.css";
 import SinglePayment from "../SinglePayment/SinglePayment";
-import fotoForm from "../../assets/foto-form.jpg";
+import fotoForm from "../../assets/foto-form.jpeg";
 
 const Form1 = ({ handleContinuar, handleData, data }) => {
 
   const dispatch = useDispatch();
 
   const [amountFlag, setAmountFlag] = useState("1000");
-
-  // const handleRedirect = (e) => {
-  //   e.preventDefault();
-  //   dispatch(
-  //     postData({
-  //       name: data.name,
-  //       lastname: data.lastname,
-  //       email: data.email,
-  //       phone: data.phone,
-  //       amount: data.amount,
-  //       time: data.time,
-  //     })
-  //   );
-  //   history.push("/unicavez");
-  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -264,15 +249,15 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
               </form>
               <p className="mt-5">
                 {" "}
-                Si querés donar por única vez, completá los datos y hacé click{" "}
+               
                 <a
                   type="button"
                   /* className="btn btn-primary" */
                   data-toggle="modal"
                   data-target="#exampleModalCenter"
-                  href="/unicaVez"
+                  href="donar por única vez"
                 >
-                  aqui
+                  Si querés donar por única vez, completá los datos y hacé click aqui
                 </a>
               </p>
               <div

@@ -1,9 +1,9 @@
 import React from "react";
 import "./index.css";
-import testimonio from "../../assets/testimonio.JPG";
-import testimonio1 from "../../assets/testimonio1.JPG";
-import testimonio2 from "../../assets/testimonio2.JPG";
-import testimonio3 from "../../assets/testimonio3.JPG";
+import testimonio from "../../assets/testimonio-min.jpg";
+import testimonio1 from "../../assets/testimonio1-min.jpg";
+import testimonio2 from "../../assets/testimonio2-min.jpg";
+import testimonio3 from "../../assets/testimonio3-min.jpg";
 
 export default function Testimony() {
   return (
@@ -15,7 +15,7 @@ export default function Testimony() {
         </h2>
         <div className="row  justify-content-md-center mt-5">
           <div className="cardBox-testimony col-md-3 col-sm-6">
-            <img src={testimonio} class="card-img-top mt-2 img-testimony-hover" alt="..." />
+            < amp-img src={testimonio} class="card-img-top mt-2 img-testimony-hover" alt="..." />
             <div className="card-body">
               <p className="cardText">
                 "Sigamos trabajando con más fuerza que nunca para construir una nueva normalidad donde todas las personas tengan un lugar seguro y se cumplan todos sus derechos."
@@ -23,7 +23,7 @@ export default function Testimony() {
             </div>
           </div>
           <div className="cardBox-testimony col-md-3 col-sm-6">
-            <img src={testimonio1} class="card-img-top mt-2 img-testimony-hover" alt="..." />
+            < amp-img src={testimonio1} class="card-img-top mt-2 img-testimony-hover" alt="..." />
             <div className="card-body">
               <p className="cardText">
                 viviendas de emergencia construidas en asentamientos.
@@ -31,7 +31,7 @@ export default function Testimony() {
             </div>
           </div>
           <div className="cardBox-testimony col-md-3 col-sm-6">
-            <img src={testimonio2} class="card-img-top mt-2 img-testimony-hover" alt="..." />
+            < amp-img src={testimonio2} class="card-img-top mt-2 img-testimony-hover" alt="..." />
             <div className="card-body">
               <p className="cardText">
                 ¿Qué te impulsó a ser voluntario? <br/>
@@ -42,7 +42,7 @@ export default function Testimony() {
             </div>
           </div>
           <div className="cardBox-testimony col-md-3 col-sm-6">
-            <img src={testimonio3} class="card-img-top mt-2 img-testimony-hover" alt="..." />
+            < amp-img src={testimonio3} class="card-img-top mt-2 img-testimony-hover" alt="..." />
             <div className="card-body">
               <p className="cardText">
               “No alcanza con soñar una Argentina más justa, hay que levantarse y construirla”.

@@ -1,18 +1,17 @@
+import loadable from '@loadable/component'
+
+
 import Navbar from "./components/Navbar/Navbar";
-import MasterForm from "./components/Form/MasterForm";
 import Footer from "./components/Footer/Footer";
-import { BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import Header from "./components/Header/Header";
-import Reality from "./components/Reality/Reality";
-
-
-import Numbers from "./components/Numbers/Numbers";
-
 import Testimony from "./components/Testimony/Testimony";
 
+
 import { Banner1 } from "./components/Banner/Banner1";
-
-
+const Numbers = loadable(() => import("./components/Numbers/Numbers"))
+const MasterForm = loadable(() => import("./components/Form/MasterForm"))
+const Reality = loadable(() => import("./components/Reality/Reality"))
 
 function App() {
   return (
@@ -27,9 +26,8 @@ function App() {
         </Switch>
         <Redirect from="/" to="/Techo" />
       </BrowserRouter>
-        <Testimony/>
+      <Testimony />
       <Reality />
-
 
       <Footer />
     </div>
