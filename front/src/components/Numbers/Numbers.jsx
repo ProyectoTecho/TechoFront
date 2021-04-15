@@ -8,7 +8,6 @@ export default function Numbers() {
   return (
     <>
       <div className="justify-content-md-center mb-5 background-numbers" >
-        <h2 className="title">Cifras TECHO</h2>
         <div className="row justify-content-md-center mt-5 ">
           <div className="cardBox col-xl-4">
             <div className="card-body ">
