@@ -6,9 +6,11 @@ import "./index.css";
 
 const BackgroundVideo = () => {
   return (
-    <div>
-      <img src={imgSource} alt="" className="img-fluid img-header" type="video/mp4"/>
+
+    <>
+    <img src={imgSource} alt="" className="img-fluid img-header" type="video/mp4"/>
       <video
+        id="myVideo"
         label="720p"
         autoPlay="autoplay"
         loop="loop"
@@ -19,7 +21,8 @@ const BackgroundVideo = () => {
       >
         <source src={videoSource} />
       </video>
-    </div>
+     
+    </>
   );
 };
 
