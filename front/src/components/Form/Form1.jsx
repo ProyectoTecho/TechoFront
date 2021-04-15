@@ -4,7 +4,7 @@ import { postData } from "../../state/reducers/user";
 import { Link } from "react-scroll";
 import "./index.css";
 import SinglePayment from "../SinglePayment/SinglePayment";
-import fotoForm from "../../assets/foto-form.jpeg";
+import fotoForm from "../../assets/foto-form.jpg";
 
 const Form1 = ({ handleContinuar, handleData, data }) => {
 
