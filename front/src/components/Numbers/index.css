@@ -3,13 +3,13 @@
     text-align: center;
 }
 
-.cardNumber:hover {
+/* .cardNumber:hover {
     font-size: 80px;
     text-align: center;
     -webkit-transform: scale(1.5);
     transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
+ */
 
 
 @media (max-width: 300px){
@@ -29,9 +29,9 @@
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: rgb(0, 146, 221);
+/*     background-color: rgb(0, 146, 221); */
     background-clip: border-box;
-    color: white;
+    color: black;
     
 }
 
@@ -50,5 +50,14 @@
 
 .number-size{
     font-size: 1000px !important;
+}
+
+.background-numbers {
+    background-image: url("../../assets/Fondo-con-transparencia.png");
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 

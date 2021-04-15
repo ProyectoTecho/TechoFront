@@ -62,7 +62,7 @@ export default function Navbar() {
           <li className="nav-item ">
             <span className="nav-link text-white whiteHover">
               <Link to="testimonios" smooth duration={1000}>
-                Testimonios
+                Nosotros/as
               </Link>
             </span>
           </li>
