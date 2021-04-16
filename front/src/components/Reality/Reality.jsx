@@ -7,7 +7,7 @@ const Reality = () => {
       <div className="container-fluid reality-center">
       {/* <h2 className="reality-title">LA URGENCIA NO ESPERA</h2> */}
         <div className="row">
-          <div className="card bolitas-left img-reality col-lg-6 col-sm-6 col-xs-12">
+          <div className="card-bg bolitas-left img-reality col-lg-6 col-sm-6 col-xs-12">
             <div className="card-body">
               <h5 className="card-title2">72%</h5>
 
@@ -17,7 +17,7 @@ const Reality = () => {
 
             </div>
           </div>
-          <div className="card img-reality  col-lg-6 col-sm-6 col-xs-12">
+          <div className="card-bg img-reality  col-lg-6 col-sm-6 col-xs-12">
             <div className="card-body ">
               <h5 className="card-title2 bolitas-right">94%</h5>
               <p className="card-text reality-text">
@@ -25,13 +25,13 @@ const Reality = () => {
               </p>
             </div>
           </div>
-          <div className="card bolitas-left img-reality col-lg-6 col-sm-6 col-xs-12">
+          <div className="card-bg bolitas-left img-reality col-lg-6 col-sm-6 col-xs-12">
             <div className="card-body">
               <h5 className="card-title2">98%</h5>
               <p className="card-text reality-text">Sin acceso formal a la red cloacal</p>
             </div>
           </div>
-          <div className="card img-reality  col-lg-6 col-sm-6 col-xs-12">
+          <div className="card-bg img-reality  col-lg-6 col-sm-6 col-xs-12">
             <div className="card-body">
               <h5 className="card-title2 bolitas-right">60%</h5>
               <p className="card-text reality-text">Se inunda cada vez que llueve</p>

@@ -1,17 +1,8 @@
 .cardNumber {
     font-size: 80px;
     text-align: center;
-    font-weight: 800;
+    font-weight: 600;
 }
-
-/* .cardNumber:hover {
-    font-size: 80px;
-    text-align: center;
-    -webkit-transform: scale(1.5);
-    transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
- */
-
 
 @media (max-width: 300px){
     .cardNumber{
