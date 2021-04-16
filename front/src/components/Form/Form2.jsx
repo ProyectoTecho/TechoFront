@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import axios from "axios";
 import { postData } from "../../state/reducers/user";
 import ReactGA from "react-ga";
 import fotoForm from "../../assets/foto-form.jpg";
 
 const Form2 = ({ handleVolver, handleData, data }) => {
   const dispatch = useDispatch();
-
 
   useEffect(() => {
     ReactGA.initialize("UA-26808512-1");
@@ -29,10 +29,12 @@ const Form2 = ({ handleVolver, handleData, data }) => {
         typeCard: data.typeCard,
       })
     );
+    axios.post("https://proyectotecho.herokuapp.com/api/send-mail-donation", {
+      nombre: data.name,
+      email: data.email,
+    });
     //.then(() => handleContinuar());
   };
-
-  console.log(data, "dataaaaaaaaaaaaa form 2");
 
   return (
     <>
@@ -40,11 +42,7 @@ const Form2 = ({ handleVolver, handleData, data }) => {
         <div className="card mb-3">
           <div className="row g-0">
             <div className="col-md-4">
-              <img
-                src={fotoForm}
-                className="img-fluid"
-                alt="Responsive"
-              />
+              <img src={fotoForm} className="img-fluid" alt="Responsive" />
             </div>
             <div className="col-md-8">
               <div className="card-body">
@@ -96,7 +94,7 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                       value={data.province}
                       className="form-select"
                       aria-label="Default select example"
-                    > 
+                    >
                       <option value={null}>...</option>
                       <option value="Buenos Aires">Bs. As.</option>
                       <option value="Catamarca">Catamarca</option>
@@ -212,48 +210,63 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                     Volver
                   </button>
                   <button
-
-
-
                     className="btn btn-primary mt-3 mr-3 boton disabledButton"
-                    id='submitBtn '
-
-
+                    id="submitBtn "
                     variant="primary"
                     type="submit"
                     data-toggle="modal"
                     data-target="#exampleModalCenter"
                     required
-
-
-
-                    disabled={data.dni === '' || data.province === '' || data.creditCard === '' || data.typeCard === '' ?
-                      true
-                      :
-                      false}
+                    disabled={
+                      data.dni === "" ||
+                      data.province === "" ||
+                      data.creditCard === "" ||
+                      data.typeCard === ""
+                        ? true
+                        : false
+                    }
                   >
                     Quiero ser socio/a
                   </button>
-                  <div className="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div className="modal-dialog modal-dialog-centered " role="document">
+                  <div
+                    className="modal fade "
+                    id="exampleModalCenter"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="exampleModalCenterTitle"
+                    aria-hidden="true"
+                  >
+                    <div
+                      className="modal-dialog modal-dialog-centered "
+                      role="document"
+                    >
                       <div className="modal-content ">
                         <div className="modalThanks img-fluid">
                           <div className="modalHeader">
-                            <h5 className="modal-title" id="exampleModalLongTitle">Gracias {data.name} por hacerte socio de Techo</h5>
-
+                            <h5
+                              className="modal-title"
+                              id="exampleModalLongTitle"
+                            >
+                              Gracias {data.name} por hacerte socio de Techo
+                            </h5>
 
                             {/* <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button> */}
-                           
                           </div>
 
-
-                          <div className=" descriptivo">   Gracias por su donación   </div>
+                          <div className=" descriptivo">
+                            {" "}
+                            Gracias por su donación{" "}
+                          </div>
                           <div className="modalFooter">
-
-                            <a href="/" type="button" className="btn btn-primary">Volver a inicio </a>
-                        
+                            <a
+                              href="/"
+                              type="button"
+                              className="btn btn-primary"
+                            >
+                              Volver a inicio{" "}
+                            </a>
                           </div>
                         </div>
                       </div>
