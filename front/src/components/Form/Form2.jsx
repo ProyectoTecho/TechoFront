@@ -42,16 +42,10 @@ const Form2 = ({ handleVolver, handleData, data }) => {
         <div className="card mb-3">
           <div className="row g-0">
             <div className="col-md-4">
-              <img src={fotoForm} className="img-fluid" alt="Responsive" />
+              <amp-img src={fotoForm} className="img-fluid" alt="Responsive" />
             </div>
             <div className="col-md-8">
               <div className="card-body">
-                <div className="row">
-                  <div className="col"></div>
-                  <div className="col text-right">
-                    <h6>Paso 2/2</h6>
-                  </div>
-                </div>
                 <form onSubmit={handleSubmit}>
                   <div className="mb-3">
                     <label
@@ -202,32 +196,39 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                   {/* <button type="submit" className="btn btn-primary mt-3">
                     Continuar
                   </button> */}
-                  <button
-                    className="btn btn-warning mt-3 mr-3"
-                    type="button"
-                    onClick={() => handleVolver()}
-                  >
-                    Volver
-                  </button>
-                  <button
-                    className="btn btn-primary mt-3 mr-3 boton disabledButton"
-                    id="submitBtn "
-                    variant="primary"
-                    type="submit"
-                    data-toggle="modal"
-                    data-target="#exampleModalCenter"
-                    required
-                    disabled={
-                      data.dni === "" ||
-                      data.province === "" ||
-                      data.creditCard === "" ||
-                      data.typeCard === ""
-                        ? true
-                        : false
-                    }
-                  >
-                    Quiero ser socio/a
-                  </button>
+                  <div className="row mt-4">
+                    <div className="col-6">
+                      <button
+                        className="btn btn-warning mr-3"
+                        type="button"
+                        onClick={() => handleVolver()}
+                      >
+                        Volver
+                      </button>
+                      <button
+                        className="btn btn-primary mr-3 boton disabledButton"
+                        id="submitBtn "
+                        variant="primary"
+                        type="submit"
+                        data-toggle="modal"
+                        data-target="#exampleModalCenter"
+                        required
+                        disabled={
+                          data.dni === "" ||
+                          data.province === "" ||
+                          data.creditCard === "" ||
+                          data.typeCard === ""
+                            ? true
+                            : false
+                        }
+                      >
+                        Quiero ser socio/a
+                      </button>
+                    </div>
+                    <div className="col-6 mt-2">
+                      <h6>Paso 2/2</h6>
+                    </div>
+                  </div>
                   <div
                     className="modal fade "
                     id="exampleModalCenter"
