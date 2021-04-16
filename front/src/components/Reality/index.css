@@ -24,13 +24,28 @@ card-body {
 .reality-center {
   text-align: center;
   background-image: url("../../assets/mapa_imagen.png");
-  height: 80vh;
+  height: 75vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin-bottom: 10%;
 }
+
+@media(min-width: 1200px){
+  .reality-center{
+    background-image: url("../../assets/mapa_imagen.png");
+    height: 80%;
+    width: 80%;
+    margin-bottom: 3%;
+  }
+  .reality-text {
+    display: flex;
+    transform: scale(1) translate(120%, -120%);
+    font-size: 1.2em;
+    max-width: 30%;
+  }
+}
+
 
 .img-reality{
   border: none;
@@ -57,16 +72,10 @@ card-body {
   font-size: 40px;
   padding-top: 1%;
   padding-bottom: 1%;
-
+  font-weight: bolder;
 }
 
-.reality-footer {
-  font-size: 20px;
-  color: black;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  margin-top: 2%;
-}
+
 
 .bolitas-right {
   margin-left: 77%;
@@ -86,4 +95,17 @@ card-body {
 
 .card{
   background-color: rgba(230, 100, 68, 0)!important;
+}
+
+.reality-footer {
+  
+  color: black;
+  line-height: 50px;
+  background-color: rgb(0, 146, 221);
+  text-align: center;
+  font-size: large;
+  margin-bottom: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 20px;
 }

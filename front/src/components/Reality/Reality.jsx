@@ -5,7 +5,7 @@ const Reality = () => {
   return (
     <>
       <div className="container-fluid reality-center">
-      <h2 className="reality-title">LA URGENCIA NO ESPERA</h2>
+      {/* <h2 className="reality-title">LA URGENCIA NO ESPERA</h2> */}
         <div className="row">
           <div className="card bolitas-left img-reality col-lg-6 col-sm-6 col-xs-12">
             <div className="card-body">
@@ -38,7 +38,7 @@ const Reality = () => {
             </div>
           </div>
         </div>
-        <h2 className="reality-title reality-footer">EN ARGENTINA HAY 4400 BARRIOS POPULARES QUE VIVEN ESTA REALIDAD CADA DÍA</h2>
+      {  <h2 className="reality-title reality-footer">EN ARGENTINA HAY 4400 BARRIOS POPULARES QUE VIVEN ESTA REALIDAD CADA DÍA</h2>}
       </div>
     </>
   );

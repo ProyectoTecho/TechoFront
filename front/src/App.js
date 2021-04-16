@@ -10,6 +10,9 @@ import Testimony from "./components/Testimony/Testimony";
 
 import { Banner1 } from "./components/Banner/Banner1";
 import { Banner2 } from "./components/Banner/Banner2";
+import { Banner3 } from "./components/Banner/Banner3";
+
+
 const Numbers = loadable(() => import("./components/Numbers/Numbers"))
 const MasterForm = loadable(() => import("./components/Form/MasterForm"))
 const Reality = loadable(() => import("./components/Reality/Reality"))
@@ -29,6 +32,7 @@ function App() {
         <Redirect from="/" to="/Techo" />
       </BrowserRouter>
       <Testimony />
+      <Banner3 />
       <Reality />
 
       <Footer />

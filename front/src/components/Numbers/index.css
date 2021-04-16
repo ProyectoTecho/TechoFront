@@ -1,6 +1,7 @@
 .cardNumber {
     font-size: 80px;
     text-align: center;
+    font-weight: 800;
 }
 
 /* .cardNumber:hover {
@@ -32,7 +33,7 @@
 /*     background-color: rgb(0, 146, 221); */
     background-clip: border-box;
     color: black;
-    
+    font-weight: 800;
 }
 
 .title {
