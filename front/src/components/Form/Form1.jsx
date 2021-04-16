@@ -68,11 +68,6 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
 
           <div className="col-md-8">
             <div className="card-body">
-              {/* <div className="row">
-                <div className="col-6 text-right">
-                  <h6>Paso 1/2</h6>
-                </div>
-              </div> */}
               <div className="mt-1">
                 <p className="card-text">Quiero donar mensualmente ...</p>
               </div>
@@ -244,9 +239,9 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                       Continuar
                     </button>
                   </div>
-                  <div className="col-8">
+                  <div className="col-8 mt-2">
                     <p>
-                      <b>Paso 1/2</b>
+                      <strong>Paso 1/2</strong>
                     </p>
                   </div>
                 </div>

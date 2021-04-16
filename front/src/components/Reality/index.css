@@ -1,17 +1,5 @@
-.card-title2 {
-  border: none;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  font-size: 50px;
-  background: #ea6d4f;
-  line-height: 150px;
-  color: white;
-  font-weight: bolder;
-  margin-left: 22%;
-}
-
-@media (min-width: 1600px) { /* hecho exclusivamente para pantallas grandes */
+@media (min-width: 1600px) {
+  /* hecho exclusivamente para pantallas grandes */
   .card-title2 {
     font-size: 80px;
     width: 200px;
@@ -23,38 +11,101 @@
     font-size: 2em; /* hecho exclusivamente para pantallas grandes */
   }
 }
-
+card-body {
+  text-align: center;
+  border: none;
+}
 .card-title2:hover {
   background-color: #e66444;
   -webkit-transform: scale(1.2);
   transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-card-body {
+.reality-center {
   text-align: center;
+  background-image: url("../../assets/mapa_imagen.png");
+  height: 75vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media(min-width: 1200px){
+  .reality-center{
+    background-image: url("../../assets/mapa_imagen.png");
+    height: 80%;
+    width: 80%;
+    margin-bottom: 3%;
+  }
+  .reality-text {
+    display: flex;
+    transform: scale(1) translate(120%, -120%);
+    font-size: 1.2em;
+    max-width: 30%;
+  }
+}
+
+
+.img-reality{
   border: none;
 }
 
-.s-img {
+.reality-text {
   display: flex;
-  text-align: center !important;
+  transform: scale(1) translate(125%, -120%);
+  font-size: 1.2em;
+  max-width: 30%;
 }
 
-.img-reality {
-  border: none !important;
+.reality-text-right {
+  transform: scale(1) translate(28%, -330%);
 }
 
-.reality-center {
-  text-align: center;
-  margin-bottom: 5%;
-  margin-top: 5%;
-}
-
-.reality-text{
-    font-size: 1.2em;
-}
-
-.reality-title{
+.reality-title {
+  display: flex;
+  justify-content: center;
   margin-bottom: 3%;
+  background-color: rgb(0, 146, 221);
+  color: white;
+  border-radius: 10px;
+  font-size: 40px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-weight: bolder;
 }
 
+
+
+.bolitas-right {
+  margin-left: 77%;
+  text-align: center;
+}
+.card-title2 {
+  border: none;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  font-size: 50px;
+  background: #ea6d4f;
+  line-height: 150px;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+}
+
+.card-bg{
+  background-color: rgba(230, 100, 68, 0)!important;
+}
+
+.reality-footer {
+  
+  color: black;
+  line-height: 50px;
+  background-color: rgb(0, 146, 221);
+  text-align: center;
+  font-size: large;
+  margin-bottom: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 20px;
+}

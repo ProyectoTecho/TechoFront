@@ -50,14 +50,14 @@
 .btnHover:hover {
   background-color: rgb(215, 142, 1);
   transition: 0.4s;
-  -webkit-transform: scale(1.3);
+  -webkit-transform: scale(1.1);
   border-radius: 10px;
 }
 
 .letraBtn {
   color: white;
   text-transform: uppercase;
-  
+  font-weight: bolder;
   
  
 }

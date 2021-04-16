@@ -42,7 +42,7 @@ const Form2 = ({ handleVolver, handleData, data }) => {
         <div className="card mb-3">
           <div className="row g-0">
             <div className="col-md-4">
-              <amp-img src={fotoForm} className="img-fluid" alt="Responsive" />
+              <img src={fotoForm} className="img-fluid" alt="Responsive" />
             </div>
             <div className="col-md-8">
               <div className="card-body">
@@ -226,7 +226,9 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                       </button>
                     </div>
                     <div className="col-6 mt-2">
-                      <h6>Paso 2/2</h6>
+                      <p>
+                        <strong>Paso 2/2</strong>
+                      </p>
                     </div>
                   </div>
                   <div
