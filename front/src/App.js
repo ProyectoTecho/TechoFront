@@ -9,6 +9,7 @@ import Testimony from "./components/Testimony/Testimony";
 
 
 import { Banner1 } from "./components/Banner/Banner1";
+import { Banner2 } from "./components/Banner/Banner2";
 const Numbers = loadable(() => import("./components/Numbers/Numbers"))
 const MasterForm = loadable(() => import("./components/Form/MasterForm"))
 const Reality = loadable(() => import("./components/Reality/Reality"))
@@ -20,6 +21,7 @@ function App() {
       <Header />
       <Banner1 />
       <Numbers />
+      <Banner2 />
       <BrowserRouter>
         <Switch>
           <Route exact path="/Techo" component={MasterForm} />

@@ -150,11 +150,11 @@ export default function Footer() {
                       aria-label="Default select example"
                       name="info-contacto"
                     >
-                      <option value="Quiero conocer más sobre el programa de viviendas" selected>
-                        Quiero conocer más sobre el programa de viviendas
-                      </option>
-                      <option value="Quiero hacer una donación">
+                      <option value="Quiero hacer una donación" selected>
                         Quiero hacer una donación
+                      </option>
+                      <option value="Quiero conocer más sobre el programa de viviendas">
+                        Quiero conocer más sobre el programa de viviendas
                       </option>
                       <option value="Quiero sumar a mi empresa">
                         Quiero sumar a mi empresa
