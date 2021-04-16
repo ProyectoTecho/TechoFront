@@ -15,7 +15,7 @@ export default function Testimony() {
         </h2>
         <div className="row  justify-content-md-center mt-5">
           <div className="cardBox-testimony col-md-3 col-sm-6">
-            < amp-img src={testimonio} class="card-img-top mt-2 img-testimony-hover" alt="..." />
+            <img src={testimonio} class="card-img-top mt-2 img-testimony-hover" alt="..." />
             <div className="card-body">
               <p className="cardText">
                 "Sigamos trabajando con más fuerza que nunca para construir una nueva normalidad donde todas las personas tengan un lugar seguro y se cumplan todos sus derechos."
@@ -23,7 +23,7 @@ export default function Testimony() {
             </div>
           </div>
           <div className="cardBox-testimony col-md-3 col-sm-6">
-            < amp-img src={testimonio1} class="card-img-top mt-2 img-testimony-hover" alt="..." />
+            <img src={testimonio1} class="card-img-top mt-2 img-testimony-hover" alt="..." />
             <div className="card-body">
               <p className="cardText">
                 viviendas de emergencia construidas en asentamientos.
@@ -31,7 +31,7 @@ export default function Testimony() {
             </div>
           </div>
           <div className="cardBox-testimony col-md-3 col-sm-6">
-            < amp-img src={testimonio2} class="card-img-top mt-2 img-testimony-hover" alt="..." />
+            <img src={testimonio2} class="card-img-top mt-2 img-testimony-hover" alt="..." />
             <div className="card-body">
               <p className="cardText">
                 ¿Qué te impulsó a ser voluntario? <br/>
@@ -42,7 +42,7 @@ export default function Testimony() {
             </div>
           </div>
           <div className="cardBox-testimony col-md-3 col-sm-6">
-            < amp-img src={testimonio3} class="card-img-top mt-2 img-testimony-hover" alt="..." />
+            <img src={testimonio3} class="card-img-top mt-2 img-testimony-hover" alt="..." />
             <div className="card-body">
               <p className="cardText">
               “No alcanza con soñar una Argentina más justa, hay que levantarse y construirla”.
