@@ -1,46 +1,64 @@
-@media (max-width: 600px) {
-    video {
-      display: none;
-    }
-}
-
-@media (min-width: 600px) {
-    .img-header {
-      display: none;
-    }
-}
-
-/* Style the video: 100% width and height to cover the entire window */
-#myVideo {
-  /* position: fixed; */
-  right: 0;
-  bottom: 0;
+.header__video {
+  position: relative;
+  background-size: cover;
+  background-position: center;
   min-width: 100%;
   min-height: 100%;
 }
 
-/* Add some content at the bottom of the video/page */
-.content {
-  position: fixed;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
+.header__video > h1 {
+  position: absolute;
+ /*  color: white; */
+  color: rgb(0, 146, 221);
+  bottom: 20%;
+  left: 30%;
+  font-weight: 800;
+  font-size: 12vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  letter-spacing: -25px;
 }
 
-/* Style the button used to pause/play the video */
-#myBtn {
-  width: 200px;
-  font-size: 18px;
-  padding: 10px;
-  border: none;
-  background: #000;
-  color: #fff;
+.header__spanLeft {
+  font-size: 2vw;
+  letter-spacing: 1px;
+}
+.header__spanRight {
+  font-size: 2vw;
+  letter-spacing: 1px;
+  margin-left: 70%;
+}
+.header__spanArrow {
+  display: flex;
+  justify-content: center;
+}
+.header__spanArrow:hover {
+  transition: 0.3s;
   cursor: pointer;
+  height: 100%;
 }
+@media (max-width: 600px) {
+  video {
+    display: none;
+  }
+  .header__video > h1 {
+    font-size: 6vw;
+    letter-spacing: -1px;
+  }
 
-#myBtn:hover {
-  background: #ddd;
-  color: black;
+  .header__spanLeft{
+    font-size: 10px;
+  }
+  .header__spanRight{
+    font-size: 10px;
+  }
+  svg{
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  .img-header {
+    display: none;
+  }
 }
