@@ -1,12 +1,22 @@
 .texto-aporte{
     background-color: rgb(0, 146, 221);
+    font-weight: bolder;
     color: white;
-    min-height: 100px;
-    /* line-height: 95px; */
     text-align: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
-   margin-bottom: 5%;
-   font-size: x-large;
-   
+    font-size: x-large;
+    margin-bottom: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 20px;
 }
+
+.banner {
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+}
+
+#texto-black{
+    color:black
+}
+

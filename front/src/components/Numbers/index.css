@@ -1,54 +1,139 @@
-.cardNumber {
-    font-size: 80px;
-    text-align: center;
+.numbers {
+  background-image: url("../../assets/Fondo-con-transparencia.png");
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.cardNumber:hover {
-    font-size: 80px;
-    text-align: center;
-    -webkit-transform: scale(1.5);
-    transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.numbers__textCenter {
+  position: absolute;
+  bottom: 33%;
+  left: 38%;
+  border: 6px solid rgb(0, 146, 221);
+  width: 23vw;
+  height: 23vw;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-
-
-@media (max-width: 300px){
-    .cardNumber{
-        font-size: 45px;
-    }
-}
-.cardText {
-    font-size: 20px;
-    text-align: center;
-
-}
-
-.cardBox {
-    position: relative;
+.numbers__textCenter > h2 {
     display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: rgb(0, 146, 221);
-    background-clip: border-box;
-    color: white;
-    
-}
-
-.title {
-    display: flex ;
     justify-content: center;
-    font-weight: bolder;
-    font-size: 90px;
+    font-weight: 800;
+    font-size: 3vw;
+    color:rgb(0, 146, 221);
+  }
+.numbers__textCenter > h3 {
+  display: flex;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 3vw;
+  color: #e66444;
 }
 
-@media(max-width: 700px){
-    .title {
-        font-size: 46px;
-    }
+.numbers__textCenter > p {
+  font-size: 1.5vw;
+  color:black;
+  text-align: center;
+  font-weight: 600;
 }
 
-.number-size{
-    font-size: 1000px !important;
+.numbers__info {
+  display: flex;
+  height: 90vh;
+  justify-content: space-evenly;
 }
 
+.numbers__infoLeft {
+  display: flex;
+  width: 33%;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+
+.numbers__infoCenter {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.numbers__infoRight {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.numbers__items > p {
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+}
+.numbers__num {
+  font-size: 4vw;
+  font-weight: 600;
+}
+
+.numbers__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 46px;
+  }
+  .numbers__info {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+  .numbers__num {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .numbers__items > p {
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .numbers__textCenter {
+    bottom: 1%;
+    left: 38%;
+  }
+
+.numbers__textCenter > h3 {
+
+  font-size: 2vw;
+  
+}
+
+.numbers__textCenter > p {
+  font-size: 1vw;
+ 
+}
+
+  .numbers__infoLeft {
+    width: 100%;
+  }
+  .numbers__infoCenter {
+    width: 100%;
+  }
+  .numbers__infoRight {
+    width: 100%;
+  }
+}
+
+@media (max-width: 300px) {
+  .cardNumber {
+    font-size: 45px;
+  }
+}

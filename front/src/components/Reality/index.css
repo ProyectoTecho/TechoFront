@@ -1,3 +1,39 @@
+/** hover que cambia el tamaño de las pelotitas cuando pasas el cursor por encima */
+.card-title2:hover {
+  background-color: #e66444;
+  -webkit-transform: scale(1.1);
+  transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/** alínea el texto dentro de las pelotitas */
+.reality-center {
+  text-align: center;
+}
+
+/** Mapa del fondo */
+.map-background {
+  background: url("../../assets/mapa_imagen.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 60% 110%;
+}
+
+/** Texto al lado de las pelotitas */
+.reality-text {
+  font-size: 1.2em;
+  text-decoration:dotted;
+}
+
+/** Alinear el texto verticalmente  */
+.img-reality {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/** Las pelotitas en sí mismas */
 .card-title2 {
   border: none;
   width: 150px;
@@ -6,55 +42,129 @@
   font-size: 50px;
   background: #ea6d4f;
   line-height: 150px;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: bolder;
-  margin-left: 22%;
 }
 
-@media (min-width: 1600px) { /* hecho exclusivamente para pantallas grandes */
-  .card-title2 {
-    font-size: 80px;
-    width: 200px;
-    height: 200px;
-    line-height: 190px;
-    margin-right: 5%;
-  }
-  .reality-text {
-    font-size: 2em; /* hecho exclusivamente para pantallas grandes */
-  }
+
+/** Alinear las pelotitas con space around */
+.align-pelotitas {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 
-.card-title2:hover {
-  background-color: #e66444;
-  -webkit-transform: scale(1.2);
+/** Alinear las pelotitas de la izquierda */
+.left-text-bolitas {
+  display: flex;
+  text-align: left;
+  margin-left: -25%;
+  width: 75%;
+}
+
+/** Alinear las pelotitas de la derecha */
+.right-text-bolitas {
+  display: flex;
+  text-align: right;
+  margin-left: 50%;
+  width: 70%;
+}
+
+/** Texto sobre el mapa */
+.img-text-map {
+  display: flex;
+  font-size: 40px;
+  font-weight: bolder;
+  justify-content: center;
+  align-items: center;
+  color: rgb(215, 142, 1);
+}
+
+.img-text-map:hover{
+  color: rgb(255, 171, 2);
+  -webkit-transform: scale(1.05);
   transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-card-body {
-  text-align: center;
-  border: none;
+
+/**  MEDIA QUERIES */
+
+@media(min-width: 0px) and (max-width: 375px){ 
+  .map-background {
+    background: none;
+  }
+  .img-text-map {
+    font-size: 0px;
+  }
+  .left-text-bolitas {
+    text-align: center;
+    margin-left: 0%;
+    width: 100%;
+  }
+  .right-text-bolitas {
+
+    text-align: center;
+    margin-left: 0%;
+    width: 100%;
+  }
+  .img-reality {
+    margin-bottom: 5%;
+  }
 }
 
-.s-img {
-  display: flex;
-  text-align: center !important;
+@media(min-width: 376px) and (max-width:768px){
+  .map-background {
+    background:  none;
+  }
+  .img-text-map {
+    font-size: 0px;
+  }
+  .left-text-bolitas {
+    text-align: center;
+    margin-left: 0%;
+    width: 100%;
+  }
+  .right-text-bolitas {
+    text-align: center;
+    margin-left: 0%;
+    width: 100%;
+  }
+  .img-reality {
+    margin-bottom: 5%;
+  }
 }
 
-.img-reality {
-  border: none !important;
+@media(min-width: 768px) and (max-width:992px){ /** esta es la vista que rompía todo */
+  .map-background {
+    background:  none;
+  }
+  .img-text-map {
+    font-size: 0px;
+  }
+  .left-text-bolitas {
+    text-align: center;
+    margin-left: 0%;
+    width: 100%;
+  }
+  .right-text-bolitas {
+    text-align: center;
+    margin-left: 0%;
+    width: 100%;
+  }
+  .img-reality {
+    margin-bottom: 5%;
+  }
 }
 
-.reality-center {
-  text-align: center;
-  margin-bottom: 5%;
-  margin-top: 5%;
-}
+@media(min-width: 992px) and (max-width: 1400px){
+  .map-background {
+    background: url("../../assets/mapa_imagen.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 60% 110%;
+  }
+  .img-text-map {
+    font-size: 40px;
+  }
 
-.reality-text{
-    font-size: 1.2em;
 }
-
-.reality-title{
-  margin-bottom: 3%;
-}
-

@@ -3,14 +3,13 @@ import "./index.css";
 
 export const Banner1 = () => {
   return (
-    <div>
-      <div className="container-fluid">
-        <div className="row">
-          <p className="texto-aporte col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            Hacé un aporte mensual para apoyar el trabajo que realizamos de
-            forma continua en los barrios populares de Argentina durante la
-            pandemia.
-          </p>
+
+    <div id="techoInicio">
+      <div className="container-fluid ">
+        <div className="row banner">
+          <h2 className="texto-aporte col-lg-9 col-md-9 col-sm-9 col-xs-9">
+          ¡TRANSFORMEMOS LA REALIDAD EN LOS ASENTAMIENTOS INFORMALES DE ARGENTINA!
+          </h2>
         </div>
       </div>
     </div>
