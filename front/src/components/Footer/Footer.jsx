@@ -1,12 +1,18 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./index.css";
 import logoTecho from "../../assets/logotecho.png";
+import captadora1 from "../../assets/captadora1.png";
+import captadora2 from "../../assets/captadora2.png";
+import captadora3 from "../../assets/captadora3.png";
+import captadora4 from "../../assets/captadora4.png";
 
 export default function Footer() {
   const [data, setData] = useState({
     nombre: "",
     email: "",
+    telefono: ""
   });
 
   const handleData = (e) => {
@@ -143,6 +149,7 @@ export default function Footer() {
                       type="text"
                       className="form-control w-90 mb-2 "
                       placeholder="Teléfono"
+                      onChange={handleData}
                     />
 
                     <select
@@ -166,11 +173,79 @@ export default function Footer() {
                   </div>
                 </div>
                 <div className="formButton">
-                  <button type="submit" className="buttonSend">ENVIAR</button>
+                  <button
+                    type="submit"
+                    className="buttonSend"
+                    disabled={data.email === '' || data.nombre === '' || data.telefono === '' ? true : false}
+                  >
+                    ENVIAR
+                  </button>
+
                 </div>
               </form>
+
+            </div>
+            {/* Modal de las captadoras */}
+            <p className="">
+              <Link
+                type="button"
+                data-toggle="modal"
+                data-target="#staticBackdrop"
+                href="donar por única vez"
+                className="span-text captadoras-link"
+              >
+                Conocé a nuestro Equipo de Captación
+                <span>
+                  {" "}
+                  <u> acá </u>{" "}
+                </span>
+              </Link>
+            </p>
+          </div>
+
+          <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div className="modal-dialog">
+              <div className="modal-content container-fluid ">
+                <div className="modal-header">
+                  <h5 className="modal-title" id="staticBackdropLabel">Nuestras captadoras</h5>
+                </div>
+
+                <div className="modal-body ">
+                  <div className='row '>
+                    <div className="card col-lg-6 col-sm-6 col-xs-12" >
+                      <img className="card-photo-captadoras" src={captadora1} alt="Card image cap"/>
+                      <div className="card-body">
+                        <h5 className="card-title-captadoras">Ana Laura Bertoni</h5>
+                      </div>
+                    </div>
+                    <div className="card col-lg-6 col-sm-6 col-xs-12" >
+                      <img className="card-photo-captadoras" src={captadora2} alt="Card image cap"/>
+                      <div className="card-body">
+                        <h5 className="card-title-captadoras">Casiana Miranda</h5>
+                      </div>
+                    </div>
+                    <div className="card col-lg-6 col-sm-6 col-xs-12" >
+                      <img className="card-photo-captadoras" src={captadora3} alt="Card image cap"/>
+                      <div className="card-body">
+                        <h5 className="card-title-captadoras">Manuela Arrechea</h5>
+                      </div>
+                    </div>
+                    <div className="card col-lg-6 col-sm-6 col-xs-12" >
+                      <img className="card-photo-captadoras" src={captadora4} alt="Card image cap"/>
+                      <div className="card-body">
+                        <h5 className="card-title-captadoras">Naiara Gómez</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="modal-footer">
+                  <button type="button" className="btn btn-primary"  data-dismiss='modal'>Salir</button>
+                </div>
+              </div>
             </div>
           </div>
+
           <hr />
           <div className="text-center text-white">
             <p>

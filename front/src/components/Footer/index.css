@@ -57,6 +57,12 @@
     -webkit-transform: scale(1.2);
 }
 
+.buttonSend:disabled{
+    background-color: #fc8264;
+    pointer-events: none;
+}
+
+
 .column1 {
     display: flex;
     flex-direction: column;
@@ -86,4 +92,30 @@
     
 }
 
+.captadoras-link{
+    text-decoration: none;
+    color: white;
+    margin-left: 3%;
+}
+.captadoras-link:hover{
+    color: rgb(0, 0, 0);
+    -webkit-transform: scale(1.1);
+    transition: 1s
+}
 
+.card-photo-captadoras{
+    display: flex;
+    height: 220px;
+    width: 190px;
+    justify-content: center;
+}
+
+.card-title-captadoras{
+    text-align: center;
+}
+
+@media (min-width: 365px) and (max-width: 575px){
+    .card-photo-captadoras{
+      margin-left: 25%;
+    }
+}
