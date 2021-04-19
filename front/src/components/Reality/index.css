@@ -1,86 +1,39 @@
-@media (min-width: 1600px) {
-  /* hecho exclusivamente para pantallas grandes */
-  .card-title2 {
-    font-size: 80px;
-    width: 200px;
-    height: 200px;
-    line-height: 190px;
-    margin-right: 5%;
-  }
-  .reality-text {
-    font-size: 2em; /* hecho exclusivamente para pantallas grandes */
-  }
-}
-card-body {
-  text-align: center;
-  border: none;
-}
+/** hover que cambia el tamaño de las pelotitas cuando pasas el cursor por encima */
 .card-title2:hover {
   background-color: #e66444;
-  -webkit-transform: scale(1.2);
+  -webkit-transform: scale(1.1);
   transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+/** alínea el texto dentro de las pelotitas */
 .reality-center {
   text-align: center;
-  background-image: url("../../assets/mapa_imagen.png");
-  height: 75vh;
-  width: 100%;
+}
+
+/** Mapa del fondo */
+.map-background {
+  background: url("../../assets/mapa_imagen.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-position: 50% 50%;
+  background-size: 60% 110%;
 }
 
-@media(min-width: 1200px){
-  .reality-center{
-    background-image: url("../../assets/mapa_imagen.png");
-    height: 80%;
-    width: 80%;
-    margin-bottom: 3%;
-  }
-  .reality-text {
-    display: flex;
-    transform: scale(1) translate(120%, -120%);
-    font-size: 1.2em;
-    max-width: 30%;
-  }
-}
-
-
-.img-reality{
-  border: none;
-}
-
+/** Texto al lado de las pelotitas */
 .reality-text {
-  display: flex;
-  transform: scale(1) translate(125%, -120%);
   font-size: 1.2em;
-  max-width: 30%;
+  text-decoration:dotted;
 }
 
-.reality-text-right {
-  transform: scale(1) translate(28%, -330%);
-}
-
-.reality-title {
+/** Alinear el texto verticalmente  */
+.img-reality {
+  border: none;
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 3%;
-  background-color: rgb(0, 146, 221);
-  color: white;
-  border-radius: 10px;
-  font-size: 40px;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  font-weight: bolder;
+
 }
 
-
-
-.bolitas-right {
-  margin-left: 77%;
-  text-align: center;
-}
+/** Las pelotitas en sí mismas */
 .card-title2 {
   border: none;
   width: 150px;
@@ -93,19 +46,125 @@ card-body {
   font-weight: bolder;
 }
 
-.card-bg{
-  background-color: rgba(230, 100, 68, 0)!important;
+
+/** Alinear las pelotitas con space around */
+.align-pelotitas {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 
-.reality-footer {
-  
-  color: black;
-  line-height: 50px;
-  background-color: rgb(0, 146, 221);
-  text-align: center;
-  font-size: large;
-  margin-bottom: 2%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  border-radius: 20px;
+/** Alinear las pelotitas de la izquierda */
+.left-text-bolitas {
+  display: flex;
+  text-align: left;
+  margin-left: -25%;
+  width: 75%;
+}
+
+/** Alinear las pelotitas de la derecha */
+.right-text-bolitas {
+  display: flex;
+  text-align: right;
+  margin-left: 50%;
+  width: 70%;
+}
+
+/** Texto sobre el mapa */
+.img-text-map {
+  display: flex;
+  font-size: 40px;
+  font-weight: bolder;
+  justify-content: center;
+  align-items: center;
+  color: rgb(215, 142, 1);
+}
+
+.img-text-map:hover{
+  color: rgb(255, 171, 2);
+  -webkit-transform: scale(1.05);
+  transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+/**  MEDIA QUERIES */
+
+@media(min-width: 0px) and (max-width: 375px){ 
+  .map-background {
+    background: none;
+  }
+  .img-text-map {
+    font-size: 0px;
+  }
+  .left-text-bolitas {
+    text-align: center;
+    margin-left: 0%;
+    width: 100%;
+  }
+  .right-text-bolitas {
+
+    text-align: center;
+    margin-left: 0%;
+    width: 100%;
+  }
+  .img-reality {
+    margin-bottom: 5%;
+  }
+}
+
+@media(min-width: 376px) and (max-width:768px){
+  .map-background {
+    background:  none;
+  }
+  .img-text-map {
+    font-size: 0px;
+  }
+  .left-text-bolitas {
+    text-align: center;
+    margin-left: 0%;
+    width: 100%;
+  }
+  .right-text-bolitas {
+    text-align: center;
+    margin-left: 0%;
+    width: 100%;
+  }
+  .img-reality {
+    margin-bottom: 5%;
+  }
+}
+
+@media(min-width: 768px) and (max-width:992px){ /** esta es la vista que rompía todo */
+  .map-background {
+    background:  none;
+  }
+  .img-text-map {
+    font-size: 0px;
+  }
+  .left-text-bolitas {
+    text-align: center;
+    margin-left: 0%;
+    width: 100%;
+  }
+  .right-text-bolitas {
+    text-align: center;
+    margin-left: 0%;
+    width: 100%;
+  }
+  .img-reality {
+    margin-bottom: 5%;
+  }
+}
+
+@media(min-width: 992px) and (max-width: 1400px){
+  .map-background {
+    background: url("../../assets/mapa_imagen.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 60% 110%;
+  }
+  .img-text-map {
+    font-size: 40px;
+  }
+
 }
