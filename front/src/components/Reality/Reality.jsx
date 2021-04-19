@@ -25,7 +25,7 @@ function useWindowDimensions() {
 }
 
 const Reality = () => {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
 
   return (
