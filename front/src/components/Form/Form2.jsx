@@ -243,7 +243,7 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                           </div>
                           <div className=" descriptivo">
                             {" "}
-                            GRACIAS POR ASOCIARTE A TECHO
+                            GRACIAS POR ASOCIARTE A 
 
                             {" "}
                           </div>
