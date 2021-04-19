@@ -21,3 +21,16 @@
   filter: saturate(140%);
   filter: brightness(1.2);
 }
+
+.text-testimony p {
+  display: flex;
+  justify-content: center;
+  color: rgb(0, 146, 221);
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.carouselt {
+  display: flex;
+
+}
