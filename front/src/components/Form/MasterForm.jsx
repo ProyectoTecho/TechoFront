@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Form1 from "./Form1";
 import Form2 from "./Form2";
 
@@ -60,16 +61,22 @@ const MasterForm = () => {
           privacidad.
         </p>
       }
+
       <p className="text-center">
-        <a
+        <Link
           type="button"
           /* className="btn btn-primary" */
           data-toggle="modal"
           data-target="#exampleModalCenter"
           href="donar por única vez"
+          className="span-text"
         >
-          Si querés donar por única vez, completá los datos y hacé click aqui
-        </a>
+          Si querés donar por única vez, completá los datos y hacé click
+          <span>
+            {" "}
+            <u> aquí </u>{" "}
+          </span>
+        </Link>
       </p>
     </div>
   );
