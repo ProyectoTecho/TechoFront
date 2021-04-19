@@ -59,7 +59,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
   };
 
   return (
-    <div className="container">
+    <div className="container" >
       <div className="card mb-3">
         <div className="row g-0">
           <div className="col-md-4">
@@ -71,7 +71,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
               <div className="mt-1">
                 <p className="card-text">Quiero donar mensualmente ...</p>
               </div>
-              <form onSubmit={handleSubmit} id="dona">
+              <form onSubmit={handleSubmit} >
                 <div className="btn-toolbar mt-3" role="toolbar">
                   <div className="btn-group me-2 mr-3" role="group">
                     <button
