@@ -32,7 +32,7 @@ const Reality = () => {
     <>
     
         <div className="container-fluid reality-center ">
-     {/*    <div className=""> hola </div> */}
+
           <div className="container map-background" >
             <div className="row align-pelotitas">
 

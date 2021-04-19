@@ -21,6 +21,7 @@
 /** Texto al lado de las pelotitas */
 .reality-text {
   font-size: 1.2em;
+  text-decoration:dotted;
 }
 
 /** Alinear el texto verticalmente  */
@@ -28,6 +29,8 @@
   border: none;
   display: flex;
   align-items: center;
+  justify-content: center;
+
 }
 
 /** Las pelotitas en sí mismas */
@@ -76,6 +79,11 @@
   color: rgb(215, 142, 1);
 }
 
+.img-text-map:hover{
+  color: rgb(255, 171, 2);
+  -webkit-transform: scale(1.05);
+  transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
 
 /**  MEDIA QUERIES */
@@ -88,18 +96,19 @@
     font-size: 0px;
   }
   .left-text-bolitas {
-    display: flex;
     text-align: center;
     margin-left: 0%;
     width: 100%;
   }
   .right-text-bolitas {
-    display: flex;
+
     text-align: center;
     margin-left: 0%;
     width: 100%;
   }
-  
+  .img-reality {
+    margin-bottom: 5%;
+  }
 }
 
 @media(min-width: 376px) and (max-width:768px){
@@ -110,18 +119,18 @@
     font-size: 0px;
   }
   .left-text-bolitas {
-    display: flex;
     text-align: center;
     margin-left: 0%;
     width: 100%;
   }
   .right-text-bolitas {
-    display: flex;
     text-align: center;
     margin-left: 0%;
     width: 100%;
   }
-  
+  .img-reality {
+    margin-bottom: 5%;
+  }
 }
 
 @media(min-width: 768px) and (max-width:992px){ /** esta es la vista que rompía todo */
@@ -132,18 +141,18 @@
     font-size: 0px;
   }
   .left-text-bolitas {
-    display: flex;
     text-align: center;
     margin-left: 0%;
     width: 100%;
   }
   .right-text-bolitas {
-    display: flex;
     text-align: center;
     margin-left: 0%;
     width: 100%;
   }
-  
+  .img-reality {
+    margin-bottom: 5%;
+  }
 }
 
 @media(min-width: 992px) and (max-width: 1400px){
