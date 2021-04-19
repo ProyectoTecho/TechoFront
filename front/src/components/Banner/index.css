@@ -10,9 +10,14 @@
     border-radius: 20px;
 }
 
+#texto-black{
+    color:black
+}
+
 .banner {
     display: flex;
     justify-content: center;
     padding-top: 2%;
 }
+
 
