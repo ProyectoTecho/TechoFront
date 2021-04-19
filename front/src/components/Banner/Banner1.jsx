@@ -3,6 +3,7 @@ import "./index.css";
 
 export const Banner1 = () => {
   return (
+
     <div id="techoInicio">
       <div className="container-fluid ">
         <div className="row banner">

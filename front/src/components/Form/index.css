@@ -103,13 +103,33 @@ input[type=number]::-webkit-outer-spin-button {
 } 
 
 .modalThanks{
-    background-color: #000000;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('foto.JPG');
+    background-color:rgb(0, 146, 221);
     border: 10px solid;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     color: white;
-    min-width:300px;
+    min-width:400px;
+    min-height:300px;
+}
+
+.nombre-socio{
+    font-size: 30px;
+}
+
+@media (max-width: 375px){
+    .modalThanks{
+        min-width:0px;
+        min-height:0px;
+        color: white
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768){
+    .modalThanks{
+        min-width:0px;
+        min-height:0px;
+        color: white
+    }
 }
 
 .modalHeader{
@@ -155,6 +175,7 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: rgb(0, 146, 221) !important;
     color: white !important;
     border-color: white !important;
+    margin-right: 1% !important;
 }
 
 .btn-primary:hover{
@@ -169,6 +190,17 @@ input[type=number]::-webkit-outer-spin-button {
     border-color: white !important;
 }
 
+.btn-volver{
+    margin-right: 2%;
+    margin-top: 10%;
+
+    margin-bottom: 2%;
+}
+
 .card {
     border: none;
+}
+
+.span-text {
+    text-decoration: none;
 }

@@ -3,7 +3,8 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 import { postData } from "../../state/reducers/user";
 import ReactGA from "react-ga";
-import fotoForm from "../../assets/foto-form.jpg";
+import logoTecho from "../../assets/logotecho.png";
+import fotoForm from "../../assets/foto-form.jpg"
 
 const Form2 = ({ handleVolver, handleData, data }) => {
   const dispatch = useDispatch();
@@ -14,7 +15,6 @@ const Form2 = ({ handleVolver, handleData, data }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // isValidCard(data.creditCard)
     dispatch(
       postData({
         name: data.name,
@@ -33,7 +33,6 @@ const Form2 = ({ handleVolver, handleData, data }) => {
       nombre: data.name,
       email: data.email,
     });
-    //.then(() => handleContinuar());
   };
 
   return (
@@ -52,14 +51,14 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                       for="exampleFormControlInput1"
                       className="form-label"
                     >
-                      DNI
+                      Mi DNI
                     </label>
                     <input
                       name="dni"
                       type="number"
                       className="form-control"
                       id="exampleFormControlInput1"
-                      placeholder="Ingrese su DNI"
+                      placeholder="Ingresa tu DNI"
                       onChange={handleData}
                       value={data.dni}
                       required
@@ -70,18 +69,9 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                       for="exampleFormControlInput1"
                       className="form-label"
                     >
-                      Provincia
+                      Mi provincia
                     </label>
-                    {/* <input
-            name="province"
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-            placeholder="Ingrese su provincia"
-            onChange={handleData}
-            value={data.province}
-            required
-          /> */}
+
                     <select
                       name="province"
                       onChange={handleData}
@@ -128,7 +118,7 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                       type="number"
                       className="form-control"
                       id="exampleFormControlInput1"
-                      placeholder="Ingrese el numero de la tarjeta"
+                      placeholder="Ingresa el numero de tu tarjeta"
                       onChange={handleData}
                       value={data.creditCard}
                       maxlength="16"
@@ -193,9 +183,6 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                     </select>
                   </div>
 
-                  {/* <button type="submit" className="btn btn-primary mt-3">
-                    Continuar
-                  </button> */}
                   <div className="row mt-4">
                     <div className="col-6">
                       <button
@@ -244,29 +231,28 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                       role="document"
                     >
                       <div className="modal-content ">
-                        <div className="modalThanks img-fluid">
+                        <div className="container modalThanks img-fluid">
                           <div className="modalHeader">
                             <h5
-                              className="modal-title"
+                              className="modal-title nombre-socio"
                               id="exampleModalLongTitle"
                             >
-                              Gracias {data.name} por hacerte socio de Techo
+                              {data.name} : 
                             </h5>
 
-                            {/* <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button> */}
                           </div>
-
                           <div className=" descriptivo">
                             {" "}
-                            Gracias por su donación{" "}
+                            GRACIAS POR ASOCIARTE A 
+
+                            {" "}
                           </div>
+                            <img src={logoTecho} className="img-fluid" alt="Responsive" />
                           <div className="modalFooter">
                             <a
                               href="/"
                               type="button"
-                              className="btn btn-primary"
+                              className="btn btn-volver btn-primary "
                             >
                               Volver a inicio{" "}
                             </a>
