@@ -46,6 +46,7 @@
   font-weight: bolder;
 }
 
+
 /** Alinear las pelotitas con space around */
 .align-pelotitas {
   display: flex;
@@ -165,5 +166,6 @@
   .img-text-map {
     font-size: 40px;
   }
+
 }
 

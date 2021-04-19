@@ -7,7 +7,6 @@ import SinglePayment from "../SinglePayment/SinglePayment";
 import fotoForm from "../../assets/foto-form.jpg";
 
 const Form1 = ({ handleContinuar, handleData, data }) => {
-
   const dispatch = useDispatch();
 
   const [amountFlag, setAmountFlag] = useState("1000");
@@ -64,29 +63,15 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
       <div className="card mb-3">
         <div className="row g-0">
           <div className="col-md-4">
-            <img
-              src={fotoForm}
-              className="img-fluid"
-              alt="Responsive"
-            />
+            <img src={fotoForm} className="img-fluid" alt="Responsive" />
           </div>
 
           <div className="col-md-8">
             <div className="card-body">
-              <div className="row">
-                <div className="col-6">
-                  <h5 className="card-title" >Doná</h5>
-                </div>
-                <div className="col-6 text-right">
-                  <h6>Paso 1/2</h6>
-                </div>
-              </div>
               <div className="mt-1">
-                <p className="card-text">
-                  Seleccioná el monto con el cual te querés sumar mensualmente
-                </p>
+                <p className="card-text">Quiero donar mensualmente ...</p>
               </div>
-              <form onSubmit={handleSubmit} id="dona">
+              <form onSubmit={handleSubmit} >
                 <div className="btn-toolbar mt-3" role="toolbar">
                   <div className="btn-group me-2 mr-3" role="group">
                     <button
@@ -149,33 +134,32 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                 </div>
                 {console.log(amountFlag)}
                 {amountFlag === "700" ? (
-                  <div class="card border border-primary mt-3">
-                    <div class="card-body text-primary">
-                      Con 10 personas que donen <b>$700</b>, en un año{" "}
+                  <div class="card border mt-3 fondo-texto">
+                    <div class="card-body">
+                      Si vos y 10 personas más donan <b>$700 mensuales,</b> al
+                      cabo de un año{" "}
                       <b>
-                        construimos 100 metros de veredas para que las personas
-                        con movilidad reducida puedan transitar por su barrio
+                        podemos construir <b>100 metros de veredas</b> para que
+                        las personas con movilidad reducida puedan transitar por
+                        su barrio
                       </b>
                       .
                     </div>
                   </div>
                 ) : null}
                 {amountFlag === "1000" ? (
-                  <div class="card border border-primary mt-3">
-                    <div class="card-body text-primary">
-                      Con 8 personas que donen <b>$1000</b> en un año
-                      construimos{" "}
-                      <b>
-                        una vivienda de emergencia para una familia que lo
-                        necesita
-                      </b>
-                      .
+                  <div class="card mt-3 fondo-texto">
+                    <div class="card-body">
+                      Si vos y 7 personas más donan <b>$1000 mensuales,</b> al
+                      cabo de un año podemos construir{" "}
+                      <b>una vivienda de emergencia</b> para una familia que lo
+                      necesita.
                     </div>
                   </div>
                 ) : null}
                 {amountFlag === "1300" ? (
-                  <div class="card border border-primary mt-3">
-                    <div class="card-body text-primary">
+                  <div class="card border mt-3 fondo-texto">
+                    <div class="card-body">
                       Con tu donación de <b>$1300</b> por 6 meses, logramos
                       financiar{" "}
                       <b>
@@ -187,79 +171,82 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                 ) : null}
                 <div className="row">
                   <div className="col-md-6 mt-3">
-                    <label className="form-label">Nombre</label>
+                    <label className="form-label">Mi nombre</label>
                     <input
                       name="name"
                       type="text"
                       onChange={handleData}
                       value={data.name}
                       className="form-control"
-                      placeholder="Ingrese su nombre"
+                      placeholder="Ingresá tu nombre"
                       required
                     />
                   </div>
                   <div className="col-md-6 mt-3">
-                    <label className="form-label">Apellido</label>
+                    <label className="form-label">Mi apellido</label>
                     <input
                       name="lastname"
                       type="text"
                       onChange={handleData}
                       value={data.lastname}
                       className="form-control"
-                      placeholder="Ingrese su apellido"
+                      placeholder="Ingresá tu apellido"
                       required
                     />
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-md-6 mt-3">
-                    <label className="form-label">Mail</label>
+                    <label className="form-label">Mi mail</label>
                     <input
                       name="email"
                       type="email"
                       onChange={handleData}
                       value={data.email}
                       className="form-control"
-                      placeholder="Ingrese su mail"
+                      placeholder="Ingresá tu email"
                       required
                     />
                   </div>
                   <div className="col-md-6 mt-3">
-                    <label className="form-label">Teléfono</label>
+                    <label className="form-label">Mi teléfono</label>
                     <input
                       name="phone"
                       type="number"
                       onChange={handleData}
                       value={data.phone}
                       className="form-control"
-                      placeholder="Ingrese su teléfono"
+                      placeholder="Ingresá tu teléfono"
                       required
                     />
                   </div>
-                </div>                
-                  <button 
-                  disabled={data.name === '' || data.lastname === '' || data.amount === '' || data.phone === '' || data.email === '' ?
-                  true
-                  :
-                  false}
-                  type="submit" className="btn btn-primary mt-4">
-                    Continuar
-                    
-                  </button>                
+                </div>
+                <div className="row mt-4">
+                  <div className="col-4">
+                    <button
+                      disabled={
+                        data.name === "" ||
+                        data.lastname === "" ||
+                        data.amount === "" ||
+                        data.phone === "" ||
+                        data.email === ""
+                          ? true
+                          : false
+                      }
+                      type="submit"
+                      className="btn btn-primary"
+                    >
+                      Continuar
+                    </button>
+                  </div>
+                  <div className="col-8 mt-2">
+                    <p>
+                      <strong>Paso 1/2</strong>
+                    </p>
+                  </div>
+                </div>
               </form>
-              <p className="mt-5">
-                {" "}
-               
-                <a
-                  type="button"
-                  /* className="btn btn-primary" */
-                  data-toggle="modal"
-                  data-target="#exampleModalCenter"
-                  href="donar por única vez"
-                >
-                  Si querés donar por única vez, completá los datos y hacé click aqui
-                </a>
-              </p>
+              <p className="mt-5"> </p>
               <div
                 className="modal fade mt-5"
                 id="exampleModalCenter"
@@ -303,19 +290,20 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
         </div>
       </div>
       {/* ternario que oculta el botón si hay algún input dentro del formulario */}
-      {data.name !== '' || data.lastname !== ''  || data.phone !==  '' || data.email !==  '' ? 
-      null
-      :
-      <div className="botonDona">
-        <span className=" ">
-          <Link to="dona" smooth duration={1000}>
-            <button className="btn btnHover" type="submit">
-              <span className="letraBtn ">Doná</span>
-            </button>
-          </Link>
-        </span>
-      </div>
-      }
+      {data.name !== "" ||
+      data.lastname !== "" ||
+      data.phone !== "" ||
+      data.email !== "" ? null : (
+        <div className="botonDona">
+          <span className=" ">
+            <Link to="dona" smooth duration={1000}>
+              <button className="btn btnHover" type="submit">
+                <span className="letraBtn ">Doná</span>
+              </button>
+            </Link>
+          </span>
+        </div>
+      )}
     </div>
   );
 };

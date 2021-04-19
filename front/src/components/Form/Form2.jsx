@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import axios from "axios";
 import { postData } from "../../state/reducers/user";
 import ReactGA from "react-ga";
-import fotoForm from "../../assets/foto-form.jpg";
+import logoTecho from "../../assets/logotecho.png";
+import fotoForm from "../../assets/foto-form.jpg"
 
 const Form2 = ({ handleVolver, handleData, data }) => {
   const dispatch = useDispatch();
-
 
   useEffect(() => {
     ReactGA.initialize("UA-26808512-1");
@@ -14,7 +15,6 @@ const Form2 = ({ handleVolver, handleData, data }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // isValidCard(data.creditCard)
     dispatch(
       postData({
         name: data.name,
@@ -29,10 +29,11 @@ const Form2 = ({ handleVolver, handleData, data }) => {
         typeCard: data.typeCard,
       })
     );
-    //.then(() => handleContinuar());
+    axios.post("https://proyectotecho.herokuapp.com/api/send-mail-donation", {
+      nombre: data.name,
+      email: data.email,
+    });
   };
-
-  console.log(data, "dataaaaaaaaaaaaa form 2");
 
   return (
     <>
@@ -40,34 +41,24 @@ const Form2 = ({ handleVolver, handleData, data }) => {
         <div className="card mb-3">
           <div className="row g-0">
             <div className="col-md-4">
-              <img 
-                src={fotoForm}
-                className="img-fluid"
-                alt="Responsive"
-              />
+              <img src={fotoForm} className="img-fluid" alt="Responsive" />
             </div>
             <div className="col-md-8">
               <div className="card-body">
-                <div className="row">
-                  <div className="col"></div>
-                  <div className="col text-right">
-                    <h6>Paso 2/2</h6>
-                  </div>
-                </div>
                 <form onSubmit={handleSubmit}>
                   <div className="mb-3">
                     <label
                       for="exampleFormControlInput1"
                       className="form-label"
                     >
-                      DNI
+                      Mi DNI
                     </label>
                     <input
                       name="dni"
                       type="number"
                       className="form-control"
                       id="exampleFormControlInput1"
-                      placeholder="Ingrese su DNI"
+                      placeholder="Ingresa tu DNI"
                       onChange={handleData}
                       value={data.dni}
                       required
@@ -78,25 +69,16 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                       for="exampleFormControlInput1"
                       className="form-label"
                     >
-                      Provincia
+                      Mi provincia
                     </label>
-                    {/* <input
-            name="province"
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-            placeholder="Ingrese su provincia"
-            onChange={handleData}
-            value={data.province}
-            required
-          /> */}
+
                     <select
                       name="province"
                       onChange={handleData}
                       value={data.province}
                       className="form-select"
                       aria-label="Default select example"
-                    > 
+                    >
                       <option value={null}>...</option>
                       <option value="Buenos Aires">Bs. As.</option>
                       <option value="Catamarca">Catamarca</option>
@@ -136,7 +118,7 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                       type="number"
                       className="form-control"
                       id="exampleFormControlInput1"
-                      placeholder="Ingrese el numero de la tarjeta"
+                      placeholder="Ingresa el numero de tu tarjeta"
                       onChange={handleData}
                       value={data.creditCard}
                       maxlength="16"
@@ -201,59 +183,79 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                     </select>
                   </div>
 
-                  {/* <button type="submit" className="btn btn-primary mt-3">
-                    Continuar
-                  </button> */}
-                  <button
-                    className="btn btn-warning mt-3 mr-3"
-                    type="button"
-                    onClick={() => handleVolver()}
+                  <div className="row mt-4">
+                    <div className="col-6">
+                      <button
+                        className="btn btn-warning mr-3"
+                        type="button"
+                        onClick={() => handleVolver()}
+                      >
+                        Volver
+                      </button>
+                      <button
+                        className="btn btn-primary mr-3 boton disabledButton"
+                        id="submitBtn "
+                        variant="primary"
+                        type="submit"
+                        data-toggle="modal"
+                        data-target="#exampleModalCenter"
+                        required
+                        disabled={
+                          data.dni === "" ||
+                          data.province === "" ||
+                          data.creditCard === "" ||
+                          data.typeCard === ""
+                            ? true
+                            : false
+                        }
+                      >
+                        Quiero ser socio/a
+                      </button>
+                    </div>
+                    <div className="col-6 mt-2">
+                      <p>
+                        <strong>Paso 2/2</strong>
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="modal fade "
+                    id="exampleModalCenter"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="exampleModalCenterTitle"
+                    aria-hidden="true"
                   >
-                    Volver
-                  </button>
-                  <button
-
-
-
-                    className="btn btn-primary mt-3 mr-3 boton disabledButton"
-                    id='submitBtn '
-
-
-                    variant="primary"
-                    type="submit"
-                    data-toggle="modal"
-                    data-target="#exampleModalCenter"
-                    required
-
-
-
-                    disabled={data.dni === '' || data.province === '' || data.creditCard === '' || data.typeCard === '' ?
-                      true
-                      :
-                      false}
-                  >
-                    Quiero ser socio/a
-                  </button>
-                  <div className="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div className="modal-dialog modal-dialog-centered " role="document">
+                    <div
+                      className="modal-dialog modal-dialog-centered "
+                      role="document"
+                    >
                       <div className="modal-content ">
-                        <div className="modalThanks img-fluid">
+                        <div className="container modalThanks img-fluid">
                           <div className="modalHeader">
-                            <h5 className="modal-title" id="exampleModalLongTitle">Gracias {data.name} por hacerte socio de Techo</h5>
+                            <h5
+                              className="modal-title nombre-socio"
+                              id="exampleModalLongTitle"
+                            >
+                              {data.name} : 
+                            </h5>
 
-
-                            {/* <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button> */}
-                           
                           </div>
+                          <div className=" descriptivo">
+                            {" "}
+                            GRACIAS POR ASOCIARTE A 
 
-
-                          <div className=" descriptivo">   Gracias por su donación   </div>
+                            {" "}
+                          </div>
+                            <img src={logoTecho} className="img-fluid" alt="Responsive" />
                           <div className="modalFooter">
-
-                            <a href="/" type="button" className="btn btn-primary">Volver a inicio </a>
-                        
+                            <a
+                              href="/"
+                              type="button"
+                              className="btn btn-volver btn-primary "
+                            >
+                              Volver a inicio{" "}
+                            </a>
                           </div>
                         </div>
                       </div>

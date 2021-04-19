@@ -30,8 +30,14 @@ const Reality = () => {
 
   return (
     <>
-    
-        <div className="container-fluid reality-center ">
+
+      <div className="container-fluid reality-center">
+      {/* <h2 className="reality-title">LA URGENCIA NO ESPERA</h2> */}
+        <div className="row">
+          <div className="card-bg bolitas-left img-reality col-lg-6 col-sm-6 col-xs-12">
+            <div className="card-body">
+              <h5 className="card-title2">72%</h5>
+
 
           <div className="container map-background" >
             <div className="row align-pelotitas">
@@ -68,6 +74,7 @@ const Reality = () => {
               } 
 
             </div>
+
             <p className='img-text-map'>¡NECESITAMOS TU APOYO HOY!</p>
             <div >
               <div className="row align-pelotitas">        
@@ -99,6 +106,7 @@ const Reality = () => {
 
               </div>
               
+
             </div>
 
           </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Form1 from "./Form1";
 import Form2 from "./Form2";
-
 
 const MasterForm = () => {
   //const [email, setEmail] = useState("");
@@ -38,34 +38,47 @@ const MasterForm = () => {
   //console.log(data);
 
   return (
-    <>
-      <div className="masterForm">
-        {item === 0 && (
-          <Form1
-            handleContinuar={handleContinuar}
-            handleData={handleData}
-            data={data}
-          />
-        )}
-        {item === 1 && (
-          <Form2
-            handleVolver={handleVolver}
-            handleData={handleData}
-            data={data}
-          />
-        )}
-        {
-          <p className="container centerText">
+    <div className="masterForm">
+      {item === 0 && (
+        <Form1
+          handleContinuar={handleContinuar}
+          handleData={handleData}
+          data={data}
+        />
+      )}
+      {item === 1 && (
+        <Form2
+          handleVolver={handleVolver}
+          handleData={handleData}
+          data={data}
+        />
+      )}
+      {
+        <p className="container">
+          {" "}
+          Todas las donaciones a TECHO son deducibles del Impuesto a las
+          Ganancias según el Art. 81 de la Ley N° 20.628. Política de
+          privacidad.
+        </p>
+      }
+
+      <p className="text-center">
+        <Link
+          type="button"
+          /* className="btn btn-primary" */
+          data-toggle="modal"
+          data-target="#exampleModalCenter"
+          href="donar por única vez"
+          className="span-text"
+        >
+          Si querés donar por única vez, completá los datos y hacé click
+          <span>
             {" "}
-            Todas las donaciones a TECHO son deducibles del Impuesto a las
-            Ganancias según el Art. 81 de la Ley N° 20.628. Política de
-            privacidad.
-          </p>
-        }
-      </div>
-      
-      
-    </>
+            <u> aquí </u>{" "}
+          </span>
+        </Link>
+      </p>
+    </div>
   );
 };
 
