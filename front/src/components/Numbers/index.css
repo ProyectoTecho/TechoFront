@@ -22,12 +22,12 @@
 }
 
 .numbers__textCenter > h2 {
-    display: flex;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 3vw;
-    color:rgb(0, 146, 221);
-  }
+  display: flex;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 3vw;
+  color: rgb(0, 146, 221);
+}
 .numbers__textCenter > h3 {
   display: flex;
   justify-content: center;
@@ -38,7 +38,7 @@
 
 .numbers__textCenter > p {
   font-size: 1.5vw;
-  color:black;
+  color: black;
   text-align: center;
   font-weight: 600;
 }
@@ -54,7 +54,6 @@
   width: 33%;
   flex-direction: column;
   justify-content: space-around;
-  
 }
 
 .numbers__infoCenter {
@@ -86,10 +85,8 @@
   align-items: center;
 }
 
-@media (max-width: 700px) {
-  .title {
-    font-size: 46px;
-  }
+@media (max-width: 1030px) {
+ 
   .numbers__info {
     flex-direction: column;
     width: 100%;
@@ -100,26 +97,31 @@
     font-weight: 600;
   }
   .numbers__items > p {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 600;
     text-align: center;
   }
 
   .numbers__textCenter {
-    bottom: 1%;
-    left: 38%;
+    border: none;
+    position: absolute;
+    bottom: 5%;
+    left: 1%;
+    width: 100vw;
+    height: 15vh;
+    margin: auto;
   }
 
-.numbers__textCenter > h3 {
+  .numbers__textCenter > h2 {
+    font-size: 4vw;
+  }
+  .numbers__textCenter > h3 {
+    font-size: 4vw;
+  }
 
-  font-size: 2vw;
-  
-}
-
-.numbers__textCenter > p {
-  font-size: 1vw;
- 
-}
+  .numbers__textCenter > p {
+    font-size: 2vw;
+  }
 
   .numbers__infoLeft {
     width: 100%;
@@ -130,10 +132,52 @@
   .numbers__infoRight {
     width: 100%;
   }
+
 }
 
-@media (max-width: 300px) {
-  .cardNumber {
-    font-size: 45px;
+@media (max-width: 700px) {
+
+  .numbers__textCenter > h2 {
+    font-size: 5vw;
   }
+  .numbers__textCenter > h3 {
+    font-size: 3vw;
+  }
+
+  .numbers__textCenter > p {
+    font-size: 2vw;
+  }
+  .numbers__num {
+    font-size: 18px;
+    font-weight: 600;
+  }
+ 
+  .numbers__items > p {
+    font-size: 12px;
+  }
+
+}
+
+
+@media (max-width: 320px) {
+
+  .numbers__textCenter > h2 {
+    font-size: 4vw;
+  }
+  .numbers__textCenter > h3 {
+    font-size: 3vw;
+  }
+
+  .numbers__textCenter > p {
+    font-size: 2vw;
+  }
+  .numbers__num {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .numbers__items > p {
+    font-size: 10px;
+  }
+
 }

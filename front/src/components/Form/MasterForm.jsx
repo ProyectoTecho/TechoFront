@@ -65,7 +65,6 @@ const MasterForm = () => {
       <p className="text-center">
         <Link
           type="button"
-          /* className="btn btn-primary" */
           data-toggle="modal"
           data-target="#exampleModalCenter"
           href="donar por única vez"
