@@ -38,6 +38,14 @@
   cursor: pointer;
   height: 100%;
 }
+
+@media (max-width: 850px){
+  .header__video > h1 {
+  
+    letter-spacing: -10px;
+   
+  }
+}
 @media (max-width: 600px) {
   video {
     display: none;
@@ -45,6 +53,7 @@
   .header__video > h1 {
     font-size: 6vw;
     letter-spacing: -1px;
+    bottom: 7%;
   }
 
   .header__spanLeft{
@@ -56,6 +65,8 @@
   svg{
     display: none;
   }
+  
+  
 }
 @media (min-width: 600px) {
   .img-header {
