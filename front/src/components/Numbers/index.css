@@ -22,12 +22,13 @@
 }
 
 .numbers__textCenter > h2 {
-  display: flex;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 3vw;
-  color: rgb(0, 146, 221);
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 3vw;
+    color:rgb(0, 146, 221);
 }
+
 .numbers__textCenter > h3 {
   display: flex;
   justify-content: center;
