@@ -107,21 +107,25 @@
     border: none;
     position: absolute;
     bottom: 5%;
-    left: 1%;
-    width: 100vw;
+    left: 4%;
+    width: 90vw;
     height: 15vh;
     margin: auto;
   }
 
   .numbers__textCenter > h2 {
     font-size: 4vw;
+    width: 100%;
   }
   .numbers__textCenter > h3 {
     font-size: 4vw;
+   
   }
 
   .numbers__textCenter > p {
     font-size: 2vw;
+    
+
   }
 
   .numbers__infoLeft {
