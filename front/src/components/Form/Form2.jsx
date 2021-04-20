@@ -1,17 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import { postData } from "../../state/reducers/user";
-import ReactGA from "react-ga";
-import logoTecho from "../../assets/logotecho.png";
 import fotoForm from "../../assets/foto-form.jpg"
+import ModalDespedida from "./ModalDespedida"
 
 const Form2 = ({ handleVolver, handleData, data }) => {
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    ReactGA.initialize("UA-26808512-1");
-  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -198,7 +193,7 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                         variant="primary"
                         type="submit"
                         data-toggle="modal"
-                        data-target="#exampleModalCenter"
+                        data-target="#modalDespedida"
                         required
                         disabled={
                           data.dni === "" ||
@@ -218,49 +213,7 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                       </p>
                     </div>
                   </div>
-                  <div
-                    className="modal fade "
-                    id="exampleModalCenter"
-                    tabindex="-1"
-                    role="dialog"
-                    aria-labelledby="exampleModalCenterTitle"
-                    aria-hidden="true"
-                  >
-                    <div
-                      className="modal-dialog modal-dialog-centered "
-                      role="document"
-                    >
-                      <div className="modal-content ">
-                        <div className="container modalThanks img-fluid">
-                          <div className="modalHeader">
-                            <h5
-                              className="modal-title nombre-socio"
-                              id="exampleModalLongTitle"
-                            >
-                              {data.name} : 
-                            </h5>
-
-                          </div>
-                          <div className=" descriptivo">
-                            {" "}
-                            GRACIAS POR ASOCIARTE A 
-
-                            {" "}
-                          </div>
-                            <img src={logoTecho} className="img-fluid" alt="Responsive" />
-                          <div className="modalFooter">
-                            <a
-                              href="/"
-                              type="button"
-                              className="btn btn-volver btn-primary "
-                            >
-                              Volver a inicio{" "}
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <ModalDespedida name={data.name}/>
                 </form>
               </div>
             </div>
