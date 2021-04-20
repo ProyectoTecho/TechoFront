@@ -259,27 +259,18 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                   className="modal-dialog modal-dialog-centered"
                   role="document"
                 >
-                  <div className="modal-content">
-                    <div className="modal-header">
-                      <button
-                        type="button"
-                        className="close"
-                        data-dismiss="modal"
-                        aria-label="Close"
-                      >
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
+                  <div className="modal-content mt-5">
+                 
                     <div className="modal-body">
                       <SinglePayment />
                     </div>
-                    <div className="modal-footer">
+                    <div className="modal-footer mb-5">
                       <button
                         type="button"
                         className="btn btn-secondary"
                         data-dismiss="modal"
                       >
-                        Close
+                        Cerar
                       </button>
                     </div>
                   </div>
