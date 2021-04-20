@@ -1,42 +1,20 @@
-import loadable from '@loadable/component'
+import React from 'react'
+import Home from "./components/Home/Home";
 
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
-import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Testimony from "./components/Testimony/Testimony";
+import NotFound from "./components/NotFound/NotFound";
 
-
-import { Banner1 } from "./components/Banner/Banner1";
-import { Banner2 } from "./components/Banner/Banner2";
-import { Banner3 } from "./components/Banner/Banner3";
-import { Banner4 } from "./components/Banner/Banner4";
-
-
-const Numbers = loadable(() => import("./components/Numbers/Numbers"))
-const MasterForm = loadable(() => import("./components/Form/MasterForm"))
-const Reality = loadable(() => import("./components/Reality/Reality"))
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Header />
-      <Banner1 />
-      <Numbers />
-      <Banner2 />
       <BrowserRouter>
         <Switch>
-          <Route exact path="/Techo" component={MasterForm} />
-        </Switch>
-        <Redirect from="/" to="/Techo" />
+          <Route exact path="/" component={Home} />
+          <Route path="" component={NotFound}/>
+        </Switch>        
       </BrowserRouter>
-      <Testimony />
-      <Banner3 />
-      <Reality />
-      <Banner4 />
-      <Footer />
     </div>
   );
 }
