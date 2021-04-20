@@ -34,7 +34,7 @@ const BackgroundVideo = () => {
             en acción
             </span>{" "}
             <span className="header__spanArrow">
-              <Link to="techoInicio" smooth duration={1000}>
+              <Link to="techoInicio" offset={-60} smooth duration={1000}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="40"
