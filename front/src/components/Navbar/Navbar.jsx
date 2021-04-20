@@ -25,7 +25,7 @@ export default function Navbar() {
       className="navbar navbar-expand-lg navbarProp navbar-dark"
       id="header"
     >
-      <a className="navbar-brand logo-techo-margin" href="https://www.techo.org/">
+      <a className="navbar-brand logo-techo-margin" href="https://www.techo.org/" target="_blank">
         <img
           src={logotecho}
           alt="techo"
@@ -77,17 +77,6 @@ export default function Navbar() {
           </li>
           <li className="nav-item dropdown"></li>
         </ul>
-        {/*     <div className="botonDona">
-        <span className=" btnHover">
-          <Link to="dona" smooth duration ={1000}>
-          <button className="btn" type="submit" >
-            <span className="letraBtn">Doná</span>
-            
-          </button>
-        
-          </Link>
-        </span>
-        </div> */}
       </div>
     </nav>
   );
