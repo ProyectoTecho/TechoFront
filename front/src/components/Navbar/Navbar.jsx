@@ -25,7 +25,8 @@ export default function Navbar() {
       className="navbar navbar-expand-lg navbarProp navbar-dark"
       id="header"
     >
-      <a className="navbar-brand logo-techo-margin" href="https://www.techo.org/" target="_blank">
+      <a className="navbar-brand logo-techo-margin" href="https://www.techo.org/" target="_blank" rel="noopener noreferrer"
+>
         <img
           src={logotecho}
           alt="techo"
