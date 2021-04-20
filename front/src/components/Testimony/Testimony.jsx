@@ -7,7 +7,7 @@ import testimonio4 from "../../assets/testimonio3-min.jpg";
 
 export default function Testimony() {
   return (
-    <div className="bg-secondary">
+    <div className="bg-secondary" id="testimonios">
       <div className="text-testimony">
         <p>¡TE HABLAN A VOS!</p>
       </div>

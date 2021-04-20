@@ -46,12 +46,6 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
     setAmountFlag(e.target.value);
   };
 
-  /*   const handleInput = (e) => {
-    removeActive();
-    e.target.required = true;
-    
-  }; */
-
   const displayInput = (e) => {
     setAmountFlag(0);
     removeActive();
@@ -296,7 +290,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
       data.email !== "" ? null : (
         <div className="botonDona">
           <span className=" ">
-            <Link to="dona" smooth duration={1000}>
+            <Link to="dona" offset={-50} smooth duration={1000}>
               <button className="btn btnHover" type="submit">
                 <span className="letraBtn ">Doná</span>
               </button>
