@@ -4,7 +4,6 @@ import Form1 from "./Form1";
 import Form2 from "./Form2";
 
 const MasterForm = () => {
-  //const [email, setEmail] = useState("");
   const [item, setItem] = useState(0);
   const [data, setData] = useState({
     name: "",
@@ -19,10 +18,6 @@ const MasterForm = () => {
     typeCard: "",
   });
 
-  // const handleCallback = (mail) => {
-  //   setEmail(mail);
-  // };
-
   const handleContinuar = () => {
     setItem(item + 1);
   };
@@ -34,8 +29,6 @@ const MasterForm = () => {
   const handleData = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
-
-  //console.log(data);
 
   return (
     <div className="masterForm">
