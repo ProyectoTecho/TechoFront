@@ -46,12 +46,6 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
     setAmountFlag(e.target.value);
   };
 
-  /*   const handleInput = (e) => {
-    removeActive();
-    e.target.required = true;
-    
-  }; */
-
   const displayInput = (e) => {
     setAmountFlag(0);
     removeActive();
@@ -59,7 +53,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
   };
 
   return (
-    <div className="container" >
+    <div className="container">
       <div className="card mb-3">
         <div className="row g-0">
           <div className="col-md-4">
@@ -259,27 +253,18 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                   className="modal-dialog modal-dialog-centered"
                   role="document"
                 >
-                  <div className="modal-content">
-                    <div className="modal-header">
-                      <button
-                        type="button"
-                        className="close"
-                        data-dismiss="modal"
-                        aria-label="Close"
-                      >
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
+                  <div className="modal-content mt-5">
+                 
                     <div className="modal-body">
                       <SinglePayment />
                     </div>
-                    <div className="modal-footer">
+                    <div className="modal-footer mb-5">
                       <button
                         type="button"
                         className="btn btn-secondary"
                         data-dismiss="modal"
                       >
-                        Close
+                        Cerar
                       </button>
                     </div>
                   </div>
@@ -296,7 +281,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
       data.email !== "" ? null : (
         <div className="botonDona">
           <span className=" ">
-            <Link to="dona" smooth duration={1000}>
+            <Link to="dona" offset={-50} smooth duration={1000}>
               <button className="btn btnHover" type="submit">
                 <span className="letraBtn ">Doná</span>
               </button>
