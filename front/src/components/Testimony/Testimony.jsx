@@ -7,6 +7,7 @@ import testimonio4 from "../../assets/testimonio3-min.jpg";
 
 export default function Testimony() {
   return (
+   
     <div className="bg-secondary" id="testimonios">
       <div className="text-testimony">
         <p>¡TE HABLAN A VOS!</p>
@@ -103,7 +104,7 @@ export default function Testimony() {
           </div>
         </div>
         <a
-          className="carousel-control-prev"
+          className="carousel-control-prev "
           href="#carouselExampleControls"
           role="button"
           data-slide="prev"
@@ -122,5 +123,6 @@ export default function Testimony() {
         </a>
       </div>
     </div>
+    
   );
 }
