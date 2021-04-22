@@ -32,7 +32,6 @@ const Reality = () => {
     <>
 
       <div className="container-fluid reality-center">
-      {/* <h2 className="reality-title">LA URGENCIA NO ESPERA</h2> */}
           <div className="container map-background" >
             <div className="row align-pelotitas">
 

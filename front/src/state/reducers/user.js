@@ -24,11 +24,6 @@ export const postData = createAsyncThunk(
     })
   }
 );
-console.log(postData)
-
-// export const putData = createAsyncThunk('UPDATE_USER', () => {
-//     //axios.post
-// })
 
 const userReducer = createReducer([], {
   [setUser]: (state, action) => action.payload,
