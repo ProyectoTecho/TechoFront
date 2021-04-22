@@ -8,34 +8,6 @@ import { Banner5 } from "../Banner/Banner5";
 
 export default function Testimony() {
   return (
-<<<<<<< HEAD
-    <div className="bg-secondary" id="testimonios">
-      <div className="text-testimony">
-        <p>¡TE HABLAN A VOS!</p>
-      </div>
-      <div
-        id="carouselExampleControls"
-        className="carousel slide m-5"
-        data-ride="carousel"
-      >
-        
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <div className="card mb-3">
-              <div className="row g-0">
-                <div className="col-sm-12 col-md-8 d-flex justify-content-center">
-                  <img src="https://lh4.googleusercontent.com/EoQpzXxvPn4HnC7MzVtURPyK2mfSzX7Ao9_bbQ_Spe9-q_CofpwWb8F-15hngLCHVw-CyQgpLfTWq3izifavcihUdSRF44aKsKWEWV_ETz9ZCo5aQszP8z4JEonZlADqV_s1Mlv6" alt="Testimonio 1" />
-                </div>
-                <div className="col-sm-12 col-md-4">
-                  <div className="card-body">
-                    <h5 className="card-title">Voluntaria: Gabriela Arrastúa</h5>
-                    <p className="card-text">
-                    Acompañar a los vecinos y vecinas de la Mesa de Trabajo es una de las cosas que más disfruto en mi día a día. Ir al barrio, encontrarme con quienes participan del espacio y entre todos y todas pensar soluciones para los problemas que existen, pero también compartir , conocernos y formar un equipo, tienen un impacto muy positivo en mi vida: no solo logro poner al servicio mis conocimientos y experiencias, sino también aprender de las demás personas que participan. Creo que en esa construcción popular de saber está la verdadera transformación hacia una sociedad más justa.
-                    </p>
-                    <p className="card-text">
-                      <small className="text-muted">Referenta comunitaria barrio Lagomarsino: Araceli Ledesma</small>
-                    </p>
-=======
     <div>
       <div id="testimonios">
         <Banner5 />
@@ -54,7 +26,6 @@ export default function Testimony() {
                       src={testimonio1}
                       alt="Testimonio 1"
                     />
->>>>>>> 73ac134cca1f9dadf2798d4f97fea4d0f6c47392
                   </div>
                   <div className="col-sm-12 col-md-8">
                     <div className="card-body testimony__text">
