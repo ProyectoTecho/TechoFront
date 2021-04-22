@@ -64,7 +64,7 @@ export default function Navbar() {
           </li>
           <li className="nav-item ">
             <span className="nav-link text-white whiteHover">
-              <Link to="testimonios" offset={-70} smooth duration={1000}>
+              <Link to="testimonios" offset={-200} smooth duration={1000}>
                 Nosotros/as
               </Link>
             </span>
