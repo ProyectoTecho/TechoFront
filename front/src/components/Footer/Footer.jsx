@@ -37,7 +37,7 @@ export default function Footer() {
             <div className="col-md-4 mt-4 ">
               <img
                 src={logoTecho}
-                alt="logo de techo " /* acomodar tamaño y alineación del logo de TECHOO */
+                alt="logo de techo " 
                 className="img-fluid logo-footer mt-3 "
               />
               <div className="items ml-4">

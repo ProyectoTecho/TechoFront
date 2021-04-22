@@ -35,3 +35,13 @@
 
 }
 
+.testimony-img {
+  width: 350px;
+  height: 350px;
+}
+
+@media (min-width: 575px) {
+  .testimony__text {
+    padding: 5% !important;
+  }
+}

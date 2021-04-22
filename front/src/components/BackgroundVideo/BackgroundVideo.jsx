@@ -1,5 +1,5 @@
 import React from "react";
-import videoSource from "../../assets/techo.mp4";
+import videoSource from "../../assets/techo-s-logo.mp4";
 import imgSource from "../../assets/construccion.jpg";
 import { Link } from "react-scroll";
 
