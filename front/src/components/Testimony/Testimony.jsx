@@ -16,6 +16,7 @@ export default function Testimony() {
         className="carousel slide m-5"
         data-ride="carousel"
       >
+        
         <div className="carousel-inner">
           <div className="carousel-item active">
             <div className="card mb-3">
