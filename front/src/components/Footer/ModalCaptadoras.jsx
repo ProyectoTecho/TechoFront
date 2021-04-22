@@ -1,7 +1,7 @@
 import React from 'react'
 import captadora1 from "../../assets/captadora1.png";
 import captadora2 from "../../assets/captadora2.png";
-import captadora3 from "../../assets/captadora3.png";
+import captadora3 from "../../assets/captadora3.jpg";
 import captadora4 from "../../assets/captadora4.png";
 import './index.css'
 

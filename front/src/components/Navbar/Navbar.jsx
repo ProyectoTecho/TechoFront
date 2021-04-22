@@ -57,21 +57,21 @@ export default function Navbar() {
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active ">
             <span className="nav-link text-white whiteHover">
-            <Link to="inicio" smooth duration={1000}>
+            <Link to="inicio"  offset={50} smooth duration={1000}>
               Inicio <span className="sr-only">(current)</span>
               </Link>
             </span>
           </li>
           <li className="nav-item ">
             <span className="nav-link text-white whiteHover">
-              <Link to="testimonios" offset={-70} smooth duration={1000}>
+              <Link to="testimonios" offset={-200} smooth duration={1000}>
                 Nosotros/as
               </Link>
             </span>
           </li>
           <li className="nav-item ">
             <span className="nav-link text-white whiteHover">
-              <Link to="contacto" smooth duration={1000}>
+              <Link to="contacto" offset={50} smooth duration={1000}>
                 Contacto
               </Link>
             </span>
