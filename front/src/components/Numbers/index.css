@@ -152,7 +152,7 @@
   }
   .numbers__textCenter {
     font-size: 3vw;
-    bottom: 25%  
+    bottom: 15%  
   }
   .numbers__num {
     font-size: 18px;
@@ -166,7 +166,7 @@
 }
 
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
 
   .numbers__textCenter > h2 {
     font-size: 4vw;
@@ -177,6 +177,9 @@
 
   .numbers__textCenter > p {
     font-size: 2vw;
+  }
+  .numbers__textCenter {
+    bottom: 20%  
   }
   .numbers__num {
     font-size: 15px;
