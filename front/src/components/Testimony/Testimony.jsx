@@ -1,9 +1,9 @@
 import React from "react";
 import "./index.css";
-import testimonio1 from "../../assets/Gaby-testimonios.png";
+import testimonio1 from "../../assets/Gaby-testimonios.jpg";
 import testimonio2 from "../../assets/testimonio.jpg";
-import testimonio3 from "../../assets/Ara-testimonio.png";
-import testimonio4 from "../../assets/Yolanda.png";
+import testimonio3 from "../../assets/Ara-testimonio.jpg";
+import testimonio4 from "../../assets/Yolanda.jpg";
 
 
 export default function Testimony() {
