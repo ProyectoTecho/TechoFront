@@ -2,7 +2,7 @@
 import React from "react";
 import "./index.css";
 
-export const Banner4 = () => {
+export const BannerFooter = () => {
   return (
     <div>
       <div className="container-fluid ">

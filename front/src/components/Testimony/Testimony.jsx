@@ -4,13 +4,13 @@ import testimonio1 from "../../assets/Gaby-testimonios.png";
 import testimonio2 from "../../assets/testimonio.jpg";
 import testimonio3 from "../../assets/Ara-testimonio.png";
 import testimonio4 from "../../assets/Yolanda.png";
-import { Banner5 } from "../Banner/Banner5";
+
 
 export default function Testimony() {
   return (
-    <div>
+    <div className='container'>
       <div id="testimonios">
-        <Banner5 />
+        
         <div
           id="carouselExampleControls"
           className="carousel slide m-5"

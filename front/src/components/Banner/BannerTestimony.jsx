@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 
-export const Banner5 = () => {
+export const BannerTestimony = () => {
   return (
     <div>
       <div className="container-fluid ">

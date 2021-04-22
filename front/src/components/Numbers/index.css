@@ -89,6 +89,7 @@
 @media (max-width: 1030px) {
  
   .numbers__info {
+    display: block;
     flex-direction: column;
     width: 100%;
     justify-content: center;
@@ -107,7 +108,7 @@
   .numbers__textCenter {
     border: none;
     position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     left: 1%;
     width: 100vw;
     height: 15vh;
@@ -147,7 +148,11 @@
   }
 
   .numbers__textCenter > p {
-    font-size: 2vw;
+    font-size: 2vw;     
+  }
+  .numbers__textCenter {
+    font-size: 3vw;
+    bottom: 25%  
   }
   .numbers__num {
     font-size: 18px;

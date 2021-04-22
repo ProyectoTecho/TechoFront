@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 
-export const Banner1 = () => {
+export const BannerNumbers = () => {
   return (
 
     <div id="techoInicio">
