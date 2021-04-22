@@ -5,8 +5,8 @@ import CountUp from "react-countup";
 export default function Numbers() {
   return (
     <>
-      <div className="numbers">
-        <div className="numbers__info">
+      <div className="numbers ">
+        <div className="numbers__info pt-5">
           <div className="numbers__textCenter">
             
             <h2>TECHO </h2>
@@ -83,8 +83,8 @@ export default function Numbers() {
               </CountUp>
               <p>
                 {" "}
-                voluntarios/as que se movilizaron en Argentina en construcciones
-                y eventos masivos
+                viviendas de emergencia
+                construidas en los asentamientos
               </p>
             </div>
           </div>

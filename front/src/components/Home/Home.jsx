@@ -6,10 +6,11 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Testimony from "../Testimony/Testimony";
 
-import { Banner1 } from "../Banner/Banner1";
-import { Banner2 } from "../Banner/Banner2";
-import { Banner3 } from "../Banner/Banner3";
-import { Banner4 } from "../Banner/Banner4";
+import { BannerNumbers } from "../Banner/BannerNumbers";
+import { BannerForm } from "../Banner/BannerForm";
+import { BannerTestimony } from "../Banner/BannerTestimony";
+import { BannerReality } from "../Banner/BannerReality";
+import { BannerFooter } from "../Banner/BannerFooter";
 import './index.css'
 
 const Numbers = loadable(() => import("../Numbers/Numbers"))
@@ -21,14 +22,15 @@ const Home = () => {
         <div>
             <Navbar/>
             <Header />
-            <Banner1 />
+            <BannerNumbers />
             <Numbers />
-            <Banner2 />
+            <BannerForm />
                 <MasterForm />
+            <BannerTestimony />    
             <Testimony />
-            <Banner3 />
+            <BannerReality />
             <Reality />
-            <Banner4 />
+            <BannerFooter />
             <Footer />
         </div>
     )
