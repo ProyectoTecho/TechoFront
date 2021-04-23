@@ -28,11 +28,11 @@ export default function Footer() {
     });
 
     axios.all([
-      axios.post("http://localhost:8080/api/send-mail-client", {
+      axios.post("https://proyectotecho.herokuapp.com/api/send-mail-client", {
         nombre: data.nombre,
         email: data.email,
       }),
-      axios.post("http://localhost:8080/api/send-mail-techo", {
+      axios.post("https://proyectotecho.herokuapp.com/api/send-mail-techo", {
         nombre: data.nombre,
         email: data.email,
         telefono: data.telefono,
