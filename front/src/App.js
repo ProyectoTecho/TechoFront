@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="" component={NotFound}/>
+          <Route path="*" component={NotFound}/>
         </Switch>        
       </BrowserRouter>
     </div>

@@ -1,5 +1,6 @@
 .container-error {
     background: rgb(0, 146, 221) !important;
+    overflow: hidden;
 }
 
 .error-text {
