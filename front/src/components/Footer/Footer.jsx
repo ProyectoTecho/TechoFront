@@ -10,7 +10,7 @@ export default function Footer() {
     nombre: "",
     email: "",
     telefono: "",
-    infoContacto: "",
+    infoContacto: "Quiero hacer una donación",
   });
 
   const handleData = (e) => {
