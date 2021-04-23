@@ -17,17 +17,12 @@ export default function Footer() {
   };
 
   const handleSubmit = (e) => {
-    //e.preventDefault();
     axios
       .post("https://proyectotecho.herokuapp.com/api/send-mail", {
         nombre: data.nombre,
         email: data.email,
       })
-      // .then(() => axios.post("https://formspree.io/f/xzbyblnd"))
-      .then(() => console.log("nos vamos a comunicar con vos"));
   };
-
-  console.log(data);
 
   return (
     <div className="bg-primary" id="contacto">
@@ -212,7 +207,6 @@ export default function Footer() {
             </p>
             <p>Política de privacidad.</p>
           </div>
-          {/* ver fondo blanco al final del div */}
         </div>
       </div>
     </div>

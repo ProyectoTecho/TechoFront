@@ -24,9 +24,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
         time: data.time,
       })
     );
-    //.then(() => handleContinuar());
   };
-  //console.log(postData);
 
   const removeActive = () => {
     const buttons = document.querySelectorAll("button[name='amount']");
@@ -126,7 +124,6 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                     />
                   </div>
                 </div>
-                {console.log(amountFlag)}
                 {amountFlag === "700" ? (
                   <div class="card border mt-3 fondo-texto">
                     <div class="card-body">
@@ -264,7 +261,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                         className="btn btn-secondary"
                         data-dismiss="modal"
                       >
-                        Cerar
+                        Cerrar
                       </button>
                     </div>
                   </div>

@@ -32,14 +32,6 @@ export default function Navbar() {
           alt="techo"
           className='img-logo-size'
         />
-
-        {/* segunda imagen que cambia de color al hacer scroll */}
-
-        <img
-          src="assets/images/logo_2.png"
-          className="logo logo-scrolled m-top-10"
-          alt=""
-        />
       </a>
       <button
         className="navbar-toggler text-white"
