@@ -1,0 +1,18 @@
+.container-error {
+    background: rgb(0, 146, 221) !important;
+    overflow: hidden;
+}
+
+.error-text {
+    padding-top: 10%;
+    color: white;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    margin-bottom: 3rem !important;
+}
+
+.img-error {
+    width: clamp(350px, 75%, 800px) !important;
+}

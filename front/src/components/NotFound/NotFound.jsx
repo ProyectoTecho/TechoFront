@@ -1,16 +1,22 @@
-import React from 'react'
+import React from "react";
+import logotecho from "../../assets/logotecho.png";
+import "./index.css";
 
 const NotFound = () => {
-    return (
-        <div>
-            <p> 
+  return (
+    <div className="m-0 vh-100 container-error">
+      <div className="col-auto p-5 text-center">
+        <img src={logotecho} alt="techo" className="img-error" />
+        <p className="error-text">
+          No se encontraron resultados. La página solicitada no pudo
+          encontrarse. Cliqueá en el botón para ir a TECHO
+        </p>
+        <a href="/" type="button" className="btn btn-volver btn-primary ">
+          Ir a Techo{" "}
+        </a>
+      </div>
+    </div>
+  );
+};
 
-                No se encontraron resultados
-                La página solicitada no pudo encontrarse. Trate de perfeccionar su búsqueda o utilice la navegación para localizar la entrada.
-                
-            </p>
-        </div>
-    )
-}
-
-export default NotFound
+export default NotFound;
