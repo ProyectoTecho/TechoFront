@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./index.css";
 import logoTecho from "../../assets/logotecho.png";
 import ModalCaptadoras from "./ModalCaptadoras";
+import ModalContacto from "./ModalContacto";
 
 export default function Footer() {
   const [data, setData] = useState({
@@ -184,6 +185,8 @@ export default function Footer() {
                 <div className="formButton">
                   <button
                     type="submit"
+                    data-toggle="modal"
+                    data-target="#modalContacto"
                     className="buttonSend"
                     disabled={
                       data.email === "" ||
@@ -217,7 +220,7 @@ export default function Footer() {
               </Link>
             </p>
           </div>
-
+          <ModalContacto />
           <ModalCaptadoras />
 
           <hr />
