@@ -3,13 +3,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
 import logoTecho from "../../assets/logotecho.png";
-import ModalCaptadoras from './ModalCaptadoras'
+import ModalCaptadoras from "./ModalCaptadoras";
 
 export default function Footer() {
   const [data, setData] = useState({
     nombre: "",
     email: "",
-    telefono: ""
+    telefono: "",
+    infoContacto: "",
   });
 
   const handleData = (e) => {
@@ -17,11 +18,27 @@ export default function Footer() {
   };
 
   const handleSubmit = (e) => {
-    axios
-      .post("https://proyectotecho.herokuapp.com/api/send-mail", {
+    e.preventDefault();
+
+    setData({
+      nombre: "",
+      email: "",
+      telefono: "",
+      infoContacto: "",
+    });
+
+    axios.all([
+      axios.post("http://localhost:8080/api/send-mail-client", {
         nombre: data.nombre,
         email: data.email,
-      })
+      }),
+      axios.post("http://localhost:8080/api/send-mail-techo", {
+        nombre: data.nombre,
+        email: data.email,
+        telefono: data.telefono,
+        infoContacto: data.infoContacto,
+      }),
+    ]);
   };
 
   return (
@@ -32,7 +49,7 @@ export default function Footer() {
             <div className="col-md-4 mt-4 ">
               <img
                 src={logoTecho}
-                alt="logo de techo " 
+                alt="logo de techo "
                 className="img-fluid logo-footer mt-3 "
               />
               <div className="items ml-4">
@@ -113,16 +130,13 @@ export default function Footer() {
 
             <div className="col-md-8 " id="contacto ">
               <h3 className="text-center text-white mb-3 mt-3">CONTACTO</h3>
-              <form
-                action="https://formspree.io/f/xzbyblnd"
-                method="POST"
-                onSubmit={handleSubmit}
-              >
+              <form onSubmit={handleSubmit}>
                 <div className="row mb-3 ">
                   <div className="col-sm-6">
                     <input
                       name="nombre"
                       type="text"
+                      value={data.nombre}
                       className="form-control w-90 mb-2 "
                       placeholder="Nombre"
                       onChange={handleData}
@@ -130,6 +144,7 @@ export default function Footer() {
                     <input
                       name="email"
                       type="email"
+                      value={data.email}
                       className="form-control w-90 mb-2  "
                       placeholder="Email"
                       onChange={handleData}
@@ -139,6 +154,7 @@ export default function Footer() {
                     <input
                       name="telefono"
                       type="text"
+                      value={data.telefono}
                       className="form-control w-90 mb-2 "
                       placeholder="Teléfono"
                       onChange={handleData}
@@ -147,7 +163,8 @@ export default function Footer() {
                     <select
                       className="form-select mb-3 w-90 "
                       aria-label="Default select example"
-                      name="info-contacto"
+                      name="infoContacto"
+                      onChange={handleData}
                     >
                       <option value="Quiero hacer una donación" selected>
                         Quiero hacer una donación
@@ -168,18 +185,22 @@ export default function Footer() {
                   <button
                     type="submit"
                     className="buttonSend"
-                    disabled={data.email === '' || data.nombre === '' || data.telefono === '' ? true : false}
+                    disabled={
+                      data.email === "" ||
+                      data.nombre === "" ||
+                      data.telefono === ""
+                        ? true
+                        : false
+                    }
                   >
                     ENVIAR
                   </button>
-
                 </div>
               </form>
-
             </div>
 
             {/* Modal de las captadoras */}
-            
+
             <p className="">
               <Link
                 type="button"
@@ -197,8 +218,8 @@ export default function Footer() {
             </p>
           </div>
 
-          <ModalCaptadoras/>
-          
+          <ModalCaptadoras />
+
           <hr />
           <div className="text-center text-white">
             <p>
