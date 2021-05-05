@@ -5,6 +5,7 @@ import { postData } from "../../state/reducers/user";
 import fotoForm from "../../assets/foto-form.jpg"
 import ModalDespedida from "./ModalDespedida"
 
+
 const Form2 = ({ handleVolver, handleData, data }) => {
   const dispatch = useDispatch();
 
