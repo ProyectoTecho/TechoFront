@@ -305,7 +305,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
         data.email !== "" ? null : (
         <div className="botonDona">
           <span className=" ">
-            {width > 992 ?
+            {width > 375 ?
               <Link to="dona" offset={-50} smooth duration={1000}>
 
                 <button className="btn btnHover" type="submit">
