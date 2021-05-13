@@ -6,6 +6,11 @@ import logoTecho from "../../assets/logotecho.png";
 import ModalCaptadoras from "./ModalCaptadoras";
 import ModalContacto from "./ModalContacto";
 
+let baseUrl = "http://localhost:8080/"
+if(process.env.NODE_ENV == "production") {
+  baseUrl = "/"
+}
+
 export default function Footer() {
   const [data, setData] = useState({
     nombre: "",
@@ -29,11 +34,11 @@ export default function Footer() {
     });
 
     axios.all([
-      axios.post("https://proyectotecho.herokuapp.com/api/send-mail-client", {
+      axios.post(`${baseUrl}api/send-mail-client`, {
         nombre: data.nombre,
         email: data.email,
       }),
-      axios.post("https://proyectotecho.herokuapp.com/api/send-mail-techo", {
+      axios.post(`${baseUrl}api/send-mail-techo`, {
         nombre: data.nombre,
         email: data.email,
         telefono: data.telefono,

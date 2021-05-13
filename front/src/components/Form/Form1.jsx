@@ -1,10 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { postData } from "../../state/reducers/user";
 import { Link } from "react-scroll";
 import "./index.css";
 import SinglePayment from "../SinglePayment/SinglePayment";
 import fotoForm from "../../assets/foto-form.jpg";
+
+
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowDimensions;
+}
 
 const Form1 = ({ handleContinuar, handleData, data }) => {
   const dispatch = useDispatch();
@@ -50,7 +74,10 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
     e.target.required = true;
   };
 
+  const { width } = useWindowDimensions();
+
   return (
+
     <div className="container">
       <div className="card mb-3">
         <div className="row g-0">
@@ -217,10 +244,10 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                     <button
                       disabled={
                         data.name === "" ||
-                        data.lastname === "" ||
-                        data.amount === "" ||
-                        data.phone === "" ||
-                        data.email === ""
+                          data.lastname === "" ||
+                          data.amount === "" ||
+                          data.phone === "" ||
+                          data.email === ""
                           ? true
                           : false
                       }
@@ -251,7 +278,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                   role="document"
                 >
                   <div className="modal-content mt-5">
-                 
+
                     <div className="modal-body">
                       <SinglePayment />
                     </div>
@@ -273,16 +300,28 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
       </div>
       {/* ternario que oculta el botón si hay algún input dentro del formulario */}
       {data.name !== "" ||
-      data.lastname !== "" ||
-      data.phone !== "" ||
-      data.email !== "" ? null : (
+        data.lastname !== "" ||
+        data.phone !== "" ||
+        data.email !== "" ? null : (
         <div className="botonDona">
           <span className=" ">
-            <Link to="dona" offset={-50} smooth duration={1000}>
-              <button className="btn btnHover" type="submit">
-                <span className="letraBtn ">Doná</span>
-              </button>
-            </Link>
+            {width > 375 ?
+              <Link to="dona" offset={-50} smooth duration={1000}>
+
+                <button className="btn btnHover" type="submit">
+                  <span className="letraBtn ">Doná</span>
+                </button>
+
+              </Link>
+              :
+              <Link to="dona" offset={500} smooth duration={1000}>
+
+                <button className="btn btnHover" type="submit">
+                  <span className="letraBtn ">Doná</span>
+                </button>
+
+              </Link>
+            }
           </span>
         </div>
       )}

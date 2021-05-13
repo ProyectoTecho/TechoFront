@@ -8,7 +8,7 @@ import testimonio4 from "../../assets/Yolanda.jpg";
 
 export default function Testimony() {
   return (
-    <div className='container'>
+    <div className='container testimonios'>
       <div id="testimonios">
         
         <div
@@ -16,18 +16,19 @@ export default function Testimony() {
           className="carousel slide m-5"
           data-ride="carousel"
         >
+       
           <div className="carousel-inner">
             <div className="carousel-item active">
               <div className="card mb-3">
                 <div className="row g-0">
-                  <div className="col-sm-12 col-md-4">
+                  <div className="col-sm-12 col-lg-4 d-flex justify-content-center">
                     <img
                       className="testimony-img"
                       src={testimonio1}
                       alt="Testimonio 1"
                     />
                   </div>
-                  <div className="col-sm-12 col-md-8">
+                  <div className="col-sm-12 col-lg-8">
                     <div className="card-body testimony__text">
                       <h5 className="card-title text-center font-weight-bold">
                         Voluntaria: Gabriela Arrastúa
@@ -53,14 +54,14 @@ export default function Testimony() {
             <div className="carousel-item">
               <div className="card mb-3">
                 <div className="row g-0">
-                  <div className="col-sm-12 col-md-4">
+                  <div className="col-sm-12 col-lg-4 d-flex justify-content-center">
                     <img
                       className="testimony-img"
                       src={testimonio2}
                       alt="Testimonio 2"
                     />
                   </div>
-                  <div className="col-sm-12 col-md-8">
+                  <div className="col-sm-12 col-lg-8">
                     <div className="card-body testimony__text">
                       <h5 className="card-title text-center font-weight-bold">
                         Socia de TECHO: María Aguirre
@@ -80,14 +81,14 @@ export default function Testimony() {
             <div className="carousel-item">
               <div className="card mb-3">
                 <div className="row g-0">
-                  <div className="col-sm-12 col-md-4">
+                  <div className="col-sm-12 col-lg-4 d-flex justify-content-center">
                     <img
                       className="testimony-img"
                       src={testimonio3}
                       alt="Testimonio 3"
                     />
                   </div>
-                  <div className="col-sm-12 col-md-8">
+                  <div className="col-sm-12 col-lg-8">
                     <div className="card-body testimony__text">
                       <h5 className="card-title text-center font-weight-bold">
                         Referenta comunitaria barrio Lagomarsino: Araceli
@@ -110,7 +111,7 @@ export default function Testimony() {
             <div className="carousel-item">
               <div className="card mb-3">
                 <div className="row g-0">
-                  <div className="col-sm-12 col-lg-4">
+                  <div className="col-sm-12 col-lg-4 d-flex justify-content-center">
                     <img
                       className="testimony-img"
                       src={testimonio4}
@@ -138,6 +139,7 @@ export default function Testimony() {
               </div>{" "}
             </div>
           </div>
+         
           <a
             className="carousel-control-prev"
             href="#carouselExampleControls"

@@ -14,7 +14,9 @@
   color: rgb(0, 146, 221);
   margin-left: 3%;
 }
-
+.testimonios{
+  box-shadow: 5px 10px 4px 2px #8888889d; 
+}
 .img-testimony-hover:hover {
   -webkit-transform: scale(1.08);
   transition: transform 1.0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -36,13 +38,30 @@
 }
 
 .testimony-img {
-  width: 350px;
+ width: 350px;
   height: 350px;
+  display: flex;
+  justify-content: center;
+   margin: auto;
+   border-radius: 10px;
+
+}
+.carousel-control-next-icon {
+  background-image: url("https://image.flaticon.com/icons/png/512/181/181669.png" ) !important;
+}
+.carousel-control-next{
+  justify-content: flex-end !important;
 }
 
+.carousel-control-prev-icon{
+  background-image: url("https://image.flaticon.com/icons/png/512/181/181657.png") !important;
+}
+.carousel-control-prev{
+  justify-content: flex-start !important;
+}
 @media (min-width: 575px) {
   .testimony__text {
-    padding: 5% !important;
+    padding: 10% !important;
   }
 }
 
