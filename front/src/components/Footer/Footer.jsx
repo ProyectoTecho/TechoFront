@@ -6,8 +6,6 @@ import logoTecho from "../../assets/logotecho.png";
 import ModalCaptadoras from "./ModalCaptadoras";
 import ModalContacto from "./ModalContacto";
 
-console.log("PROCESS", process.env)
-
 let baseUrl = "http://localhost:8080/"
 if(process.env.NODE_ENV == "production") {
   baseUrl = "/"
