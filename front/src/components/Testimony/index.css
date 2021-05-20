@@ -64,3 +64,11 @@
     padding: 10% !important;
   }
 }
+
+.carousel-control-prev-icon{
+  background-image: url() !important;
+}
+
+.carousel-control-next-icon{
+  background-image: url();
+}

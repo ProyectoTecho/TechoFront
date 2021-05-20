@@ -10,6 +10,11 @@ if(process.env.NODE_ENV == "production") {
   baseUrl = "/"
 }
 
+let baseUrl = "http://localhost:8080/"
+if(process.env.NODE_ENV == "production") {
+	baseUrl = "http://138.197.111.45:3000"
+}
+
 const Form2 = ({ handleVolver, handleData, data }) => {
   const dispatch = useDispatch();
 
@@ -29,7 +34,7 @@ const Form2 = ({ handleVolver, handleData, data }) => {
         typeCard: data.typeCard,
       })
     );
-    axios.post(`${baseUrl}api/send-mail-donation`, {
+    axios.post(`${baseUrl}/api/send-mail-donation`, {
       nombre: data.name,
       email: data.email,
     });
