@@ -6,7 +6,7 @@ const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: false,
-    }).concat(logger),
+    }).concat(),
   reducer: {
     user: userReducer,
   },
