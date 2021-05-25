@@ -11,6 +11,7 @@ if(process.env.NODE_ENV == "production") {
   baseUrl = "/"
 }
 
+
 export default function Footer() {
   const [data, setData] = useState({
     nombre: "",
