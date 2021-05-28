@@ -10,7 +10,7 @@ export const setUser = createAction('SET_USER')
 export const postData = createAsyncThunk(
   "CREATE_USER",
   ({ name, lastname, email, phone, amount, time, dni, province, creditCard, typeCard}) => {
-    return axios.post(`https://proyectotecho.herokuapp.com/api/user`, {
+    return axios.post(`https://sheet.best/api/sheets/79372238-f610-4142-b1f4-87faedddfe10`, {
       name,
       lastname,
       email,
