@@ -32,7 +32,9 @@ const BackgroundVideo = () => {
 
         <h1>
           <span className="header__spanLeft"> Poné a </span> 
-          <img src={logoTechoAzul} height='140'/>
+
+          <img alt="" className='blue-logo-techo'src={logoTechoAzul} height='140'/>
+
           <span className="header__spanRight">
             en acción
             </span>{" "}
