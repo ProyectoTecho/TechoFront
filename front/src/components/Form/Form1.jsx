@@ -77,8 +77,8 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
   const { width } = useWindowDimensions();
 
   return (
-
-    <div className="container">
+    
+    <section className="container">
       <div className="card mb-3">
         <div className="row g-0">
           <div className="col-md-4">
@@ -325,7 +325,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
           </span>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

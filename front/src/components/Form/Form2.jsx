@@ -37,7 +37,7 @@ const Form2 = ({ handleVolver, handleData, data }) => {
   };
 
   return (
-    <>
+    <section>
       <div className="container">
         <div className="card mb-3">
           <div className="row g-0">
@@ -226,7 +226,7 @@ const Form2 = ({ handleVolver, handleData, data }) => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
