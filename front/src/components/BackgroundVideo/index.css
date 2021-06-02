@@ -20,6 +20,9 @@
   letter-spacing: -25px;
 }
 
+.header__image {
+  height: 1em;
+}
 .header__spanLeft {
   font-size: 2vw;
   letter-spacing: 1px;

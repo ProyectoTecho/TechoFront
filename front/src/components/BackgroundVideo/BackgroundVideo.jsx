@@ -9,7 +9,8 @@ import "./index.css";
 const BackgroundVideo = () => {
   
   return (
-    <>
+    
+    <header>
       <div className="header__video">
         <img
           src={imgSource}
@@ -33,7 +34,7 @@ const BackgroundVideo = () => {
         <h1>
           <span className="header__spanLeft"> Poné a </span> 
 
-          <img alt="logo techo" src={logoTechoAzul} height='140'/>
+          <img className="header__image" alt="logo techo" src={logoTechoAzul} height='140'/>
 
           <span className="header__spanRight">
             en acción
@@ -60,7 +61,7 @@ const BackgroundVideo = () => {
         </h1>
         <div></div>
       </div>
-    </>
+      </header>
   );
 };
 
