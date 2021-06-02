@@ -7,7 +7,7 @@ import ModalDespedida from "./ModalDespedida"
 
 let baseUrl = "http://localhost:8080/"
 if(process.env.NODE_ENV === "production") {
-  baseUrl = "/"
+	baseUrl = "/"
 }
 
 
@@ -30,7 +30,7 @@ const Form2 = ({ handleVolver, handleData, data }) => {
         typeCard: data.typeCard,
       })
     );
-    axios.post(`${baseUrl}/api/send-mail-donation`, {
+    axios.post(`${baseUrl}api/send-mail-donation`, {
       nombre: data.name,
       email: data.email,
     });
