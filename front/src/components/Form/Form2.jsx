@@ -5,9 +5,8 @@ import { postData } from "../../state/reducers/user";
 import fotoForm from "../../assets/foto-form.jpg"
 import ModalDespedida from "./ModalDespedida"
 
-
 let baseUrl = "http://localhost:8080/"
-if(process.env.NODE_ENV == "production") {
+if(process.env.NODE_ENV === "production") {
 	baseUrl = "/"
 }
 

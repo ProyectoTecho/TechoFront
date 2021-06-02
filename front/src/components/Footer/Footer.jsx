@@ -7,7 +7,7 @@ import ModalCaptadoras from "./ModalCaptadoras";
 import ModalContacto from "./ModalContacto";
 
 let baseUrl = "http://localhost:8080/"
-if(process.env.NODE_ENV == "production") {
+if(process.env.NODE_ENV === "production") {
   baseUrl = "/"
 }
 
