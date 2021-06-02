@@ -6,14 +6,10 @@ import fotoForm from "../../assets/foto-form.jpg"
 import ModalDespedida from "./ModalDespedida"
 
 let baseUrl = "http://localhost:8080/"
-if(process.env.NODE_ENV == "production") {
+if(process.env.NODE_ENV === "production") {
   baseUrl = "/"
 }
 
-let baseUrl = "http://localhost:8080/"
-if(process.env.NODE_ENV == "production") {
-	baseUrl = "http://138.197.111.45:3000"
-}
 
 const Form2 = ({ handleVolver, handleData, data }) => {
   const dispatch = useDispatch();
