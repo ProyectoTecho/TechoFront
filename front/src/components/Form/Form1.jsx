@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 import "./index.css";
 import SinglePayment from "../SinglePayment/SinglePayment";
 import fotoForm from "../../assets/foto-form.jpg";
-
+import { db } from '../../firebase/firebase'
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
@@ -34,6 +34,13 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
   const dispatch = useDispatch();
 
   const [amountFlag, setAmountFlag] = useState("1000");
+
+  const [montos, setMontos] = useState("")
+
+  useEffect(() => {
+    /* cada vez que refresco la página o se actualiza un estado */
+    getMontos()
+  }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -74,6 +81,18 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
     e.target.required = true;
   };
 
+  const getMontos = async () => {
+    db
+      .collection('montos')
+      .onSnapshot((querySnapshot) => {
+        const docs = []
+        querySnapshot.forEach((doc) => {
+          docs.push({ ...doc.data(), id: doc.id })
+        });
+        setMontos(docs)
+      })
+  }
+
   const { width } = useWindowDimensions();
 
   return (
@@ -98,27 +117,27 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                       type="button"
                       className="btn btn-outline-primary"
                       onClick={(handleData, toggleClass)}
-                      value={700}
+                      value={montos[0].firstMonto}
                     >
-                      700 ARS
+                      {montos[0].firstMonto} ARS
                     </button>
                     <button
                       name="amount"
                       type="button"
                       className="btn btn-outline-primary active"
                       onClick={(handleData, toggleClass)}
-                      value={1000}
+                      value={montos[0].secondMonto}
                     >
-                      1000 ARS
+                      {montos[0].secondMonto} ARS
                     </button>
                     <button
                       name="amount"
                       type="button"
                       className="btn btn-outline-primary"
                       onClick={(handleData, toggleClass)}
-                      value={1300}
+                      value={montos[0].thirdMonto}
                     >
-                      1300 ARS
+                      {montos[0].thirdMonto} ARS
                     </button>
                   </div>
                   <div className="input-group">
