@@ -112,32 +112,32 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
               <form onSubmit={handleSubmit} >
                 <div className="btn-toolbar mt-3" role="toolbar">
                   <div className="btn-group me-2 mr-3" role="group">
-                    <button
+                  <button
                       name="amount"
                       type="button"
                       className="btn btn-outline-primary"
                       onClick={(handleData, toggleClass)}
-                      value={montos[0].firstMonto}
+                      value={montos ? montos[0].firstMonto : 700}
                     >
-                      {montos[0].firstMonto} ARS
+                      {montos ? montos[0].firstMonto : 700} ARS
                     </button>
                     <button
                       name="amount"
                       type="button"
                       className="btn btn-outline-primary active"
                       onClick={(handleData, toggleClass)}
-                      value={montos[0].secondMonto}
+                      value={montos ? montos[0].secondMonto : 1000}
                     >
-                      {montos[0].secondMonto} ARS
+                      {montos ? montos[0].secondMonto : 1000} ARS
                     </button>
                     <button
                       name="amount"
                       type="button"
                       className="btn btn-outline-primary"
                       onClick={(handleData, toggleClass)}
-                      value={montos[0].thirdMonto}
+                      value={montos ? montos[0].thirdMonto : 1300}
                     >
-                      {montos[0].thirdMonto} ARS
+                      {montos ? montos[0].thirdMonto : 1300} ARS
                     </button>
                   </div>
                   <div className="input-group">
