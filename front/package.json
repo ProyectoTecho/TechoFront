@@ -12,6 +12,8 @@
     "bootstrap": "5.0.0-alpha1",
     "bootstrap-icons": "^1.4.0",
     "dotenv": "^10.0.0",
+    "firebase": "^8.6.5",
+    "firebaseui": "^4.8.0",
     "install": "^0.13.0",
     "jquery": "^3.6.0",
     "node-sass": "^5.0.0",
