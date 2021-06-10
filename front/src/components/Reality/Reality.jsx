@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
+import { db } from '../../firebase/firebase'
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
@@ -27,6 +28,23 @@ function useWindowDimensions() {
 const Reality = () => {
   const { width } = useWindowDimensions();
 
+  const [percent, setPercent] = useState("")
+
+  useEffect(() => {
+    getPercent()
+  }, [])
+
+  const getPercent = async () => {
+    db
+      .collection('percent')
+      .onSnapshot((querySnapshot) => {
+        const docs = []
+        querySnapshot.forEach((doc) => {
+          docs.push({ ...doc.data(), id: doc.id })
+        });
+        setPercent(docs)
+      })
+  }
 
   return (
     <>
@@ -36,6 +54,7 @@ const Reality = () => {
             <div className="row align-pelotitas">
 
               <h5 className="card-title2">72%</h5>
+              {/* <h5 className="card-title2">{montos ? montos[0].firstMonto : 72}%</h5> */}
               <div className="img-reality col-lg-3  col-xs-12">
                 <div className="">
                   <div className="card-text reality-text left-text-bolitas">
