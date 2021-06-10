@@ -53,8 +53,9 @@ const Reality = () => {
           <div className="container map-background" >
             <div className="row align-pelotitas">
 
-              <h5 className="card-title2">72%</h5>
-              {/* <h5 className="card-title2">{montos ? montos[0].firstMonto : 72}%</h5> */}
+              {/* <h5 className="card-title2">72%</h5> */}
+              <h5 className="card-title2">
+              {percent ? percent[0].firstPercent : 72}%</h5>
               <div className="img-reality col-lg-3  col-xs-12">
                 <div className="">
                   <div className="card-text reality-text left-text-bolitas">
@@ -70,11 +71,11 @@ const Reality = () => {
                     </div>
                   </div>
                 </div>
-                <h5 className="card-title2 ">94%</h5>
+                <h5 className="card-title2 ">{percent ? percent[0].secondPercent : 94}%</h5>
                 </>
                 : 
                 <>
-                <h5 className="card-title2 ">94%</h5>
+                <h5 className="card-title2 ">{percent ? percent[0].secondPercent : 94}%</h5>
                 <div className="img-reality  col-lg-3  col-xs-12">
                   <div className=" ">
                     <div className="card-text reality-text right-text-bolitas pelotitas-responsive">
@@ -90,7 +91,7 @@ const Reality = () => {
             <p className='img-text-map'>¡NECESITAMOS TU APOYO HOY!</p>
             <div >
               <div className="row align-pelotitas">        
-                <h5 className="card-title2">98%</h5>
+                <h5 className="card-title2">{percent ? percent[0].thirdPercent : 98}%</h5>
                 <div className="img-reality col-lg-3 col-xs-12">
                   <div className="">
                     <div className="card-text reality-text left-text-bolitas">Sin acceso formal a la red cloacal</div>
@@ -103,11 +104,11 @@ const Reality = () => {
                     <div className="card-text reality-text right-text-bolitas pelotitas-responsive">Se inunda cada vez que llueve</div>
                   </div>
                 </div>
-                <h5 className="card-title2 ">60%</h5>
+                <h5 className="card-title2 ">{percent ? percent[0].fourthPercent : 60}%</h5>
               </>
               :
               <>
-                <h5 className="card-title2 ">60%</h5>
+                <h5 className="card-title2 ">{percent ? percent[0].fourthPercent : 60}%</h5>
                 <div className="img-reality  col-lg-3  col-xs-12">
                   <div>
                     <div className="card-text reality-text right-text-bolitas pelotitas-responsive">Se inunda cada vez que llueve</div>
