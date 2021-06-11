@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { db } from '../../firebase/firebase'
+
 
 import "./index.css";
 
 export default function SinglePayment() {
+  const [botonMP, setBotonMP] = useState("")
+
+  useEffect(() => {
+    getBotonMP()
+  }, [])
+
+  const getBotonMP = async () => {
+    db
+      .collection('donacionesMP')
+      .onSnapshot((querySnapshot) => {
+        const docs = []
+        querySnapshot.forEach((doc) => {
+          docs.push({ ...doc.data(), id: doc.id })
+        });
+        setBotonMP(docs)
+      })
+  }
+
+  console.log(botonMP)
+
   return (
     <>
       <div className="container ">
@@ -11,6 +33,7 @@ export default function SinglePayment() {
 
           <div className="singlePayment__mercadoPago">
             <h3 className="singlePayment__titles">Mercado Pago</h3>
+
             <img
               className="logoMP"
               src="https://static.wixstatic.com/media/8c9b2b_d1e0cee8b3ba42c5a8962f104c1e0c9e~mv2.png/v1/fill/w_40,h_38,al_c,q_85,usm_0.66_1.00_0.01/logo%20mp.webp"
@@ -20,41 +43,49 @@ export default function SinglePayment() {
 
           <div className="singlePayment__button">
             <a
-              href="https://www.mercadopago.com.ar/checkout/v1/payment/redirect/5c5bc789-3602-4f39-af34-bfe6bb1c3f93/express/?source=link&preference-id=156146314-8405f297-06b6-47ac-b07b-bf21319e2ac8&p=626a5366dc3a8e506444719203a19dbf"
+
+              href={botonMP ? botonMP[0].firstLink : "https://www.mercadopago.com.ar/checkout/v1/payment/redirect/5c5bc789-3602-4f39-af34-bfe6bb1c3f93/express/?source=link&preference-id=156146314-8405f297-06b6-47ac-b07b-bf21319e2ac8&p=626a5366dc3a8e506444719203a19dbf"}
               target="blank"
             >
-              <button>$500</button>
-            </a>
-            <a
-              href="https://www.mercadopago.com.ar/checkout/v1/payment/redirect/9eefc613-100d-49b1-b5d4-547e41a240bb/express/?source=link&preference-id=156146314-2b57bed7-8d15-4cef-8fb7-dfce810ee052&p=626a5366dc3a8e506444719203a19dbf"
-              target="blank"
-            >
-              <button>$700</button>
-            </a>
-            <a
-              href="https://www.mercadopago.com.ar/checkout/v1/payment/redirect/29283afa-2f93-46a4-b3b5-c1e911bb7d37/express/?source=link&preference-id=156146314-9a847fa6-5190-4a77-ad14-aef5a98cab28&p=626a5366dc3a8e506444719203a19dbf"
-              target="blank"
-            >
-              <button>$1000</button>
+              <button>${botonMP ? botonMP[0].firstButton : 500}</button>
             </a>
 
             <a
-              href="https://www.mercadopago.com.ar/checkout/v1/payment/redirect/338bc11d-e77e-49e0-bba3-9e51e3825d95/express/?source=link&preference-id=156146314-1315ff81-cbd4-471f-ba1b-f43a1e53b28f&p=626a5366dc3a8e506444719203a19dbf"
+              href={botonMP ? botonMP[0].secondLink : "https://www.mercadopago.com.ar/checkout/v1/payment/redirect/9eefc613-100d-49b1-b5d4-547e41a240bb/express/?source=link&preference-id=156146314-2b57bed7-8d15-4cef-8fb7-dfce810ee052&p=626a5366dc3a8e506444719203a19dbf"}
               target="blank"
             >
-              <button>$2000</button>
+              <button>${botonMP ? botonMP[0].secondButton : 700}</button>
             </a>
+
             <a
-              href="https://www.mercadopago.com.ar/checkout/v1/payment/redirect/25647eb5-000a-4245-bd7c-4f9f88a37422/express/?preference-id=156146314-021f4baa-32f1-4d69-903a-cff016743f6b&source=link&p=626a5366dc3a8e506444719203a19dbf"
+              href={botonMP ? botonMP[0].thirdLink : "https://www.mercadopago.com.ar/checkout/v1/payment/redirect/29283afa-2f93-46a4-b3b5-c1e911bb7d37/express/?source=link&preference-id=156146314-9a847fa6-5190-4a77-ad14-aef5a98cab28&p=626a5366dc3a8e506444719203a19dbf"}
               target="blank"
             >
-              <button>$3000</button>
+              <button>${botonMP ? botonMP[0].thirdButton : 1000}</button>
             </a>
+
             <a
-              href="https://www.mercadopago.com.ar/checkout/v1/payment/redirect/ce12a293-d496-4ea7-a0a7-7dda63e69bc2/express/?source=link&preference-id=156146314-26ee9eba-d4b0-480d-be4c-e74228ca8c87&p=4eeafd42bd088cc925225bedf818be1b"
+              href={botonMP ? botonMP[0].fourthLink : "https://www.mercadopago.com.ar/checkout/v1/payment/redirect/338bc11d-e77e-49e0-bba3-9e51e3825d95/express/?source=link&preference-id=156146314-1315ff81-cbd4-471f-ba1b-f43a1e53b28f&p=626a5366dc3a8e506444719203a19dbf"}
               target="blank"
             >
-              <button>$5000</button>
+              <button>${botonMP ? botonMP[0].fourthButton : 2000}</button>
+            </a>
+
+            <a
+
+              href={botonMP ? botonMP[0].fifthLink : "https://www.mercadopago.com.ar/checkout/v1/payment/redirect/25647eb5-000a-4245-bd7c-4f9f88a37422/express/?preference-id=156146314-021f4baa-32f1-4d69-903a-cff016743f6b&source=link&p=626a5366dc3a8e506444719203a19dbf"}
+
+              target="blank"
+            >
+              <button>${botonMP ? botonMP[0].fifthButton : 3000}</button>
+            </a>
+
+            <a
+              href={botonMP ? botonMP[0].sixthLink : "https://www.mercadopago.com.ar/checkout/v1/payment/redirect/ce12a293-d496-4ea7-a0a7-7dda63e69bc2/express/?source=link&preference-id=156146314-26ee9eba-d4b0-480d-be4c-e74228ca8c87&p=4eeafd42bd088cc925225bedf818be1b"}
+
+              target="blank"
+            >
+              <button>${botonMP ? botonMP[0].sixthButton : 5000}</button>
             </a>
           </div>
 
