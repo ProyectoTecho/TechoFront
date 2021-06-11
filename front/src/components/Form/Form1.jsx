@@ -170,10 +170,10 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                     />
                   </div>
                 </div>
-                {amountFlag === "700" ? (
+                {montos && amountFlag === montos[0].firstMonto ? (
                   <div class="card border mt-3 fondo-texto">
                     <div class="card-body">
-                      Si vos y 10 personas más donan <b>$700 mensuales,</b> al
+                      Si vos y 10 personas más donan <b>${montos[0].firstMonto} mensuales,</b> al
                       cabo de un año{" "}
                       <b>
                         podemos construir <b>100 metros de veredas</b> para que
@@ -184,20 +184,20 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                     </div>
                   </div>
                 ) : null}
-                {amountFlag === "1000" ? (
+                {montos && amountFlag === montos[0].secondMonto ? (
                   <div class="card mt-3 fondo-texto">
                     <div class="card-body">
-                      Si vos y 7 personas más donan <b>$1000 mensuales,</b> al
+                      Si vos y 7 personas más donan <b>${montos[0].secondMonto} mensuales,</b> al
                       cabo de un año podemos construir{" "}
                       <b>una vivienda de emergencia</b> para una familia que lo
                       necesita.
                     </div>
                   </div>
                 ) : null}
-                {amountFlag === "1300" ? (
+                {montos && amountFlag ===  montos[0].thirdMonto ? (
                   <div class="card border mt-3 fondo-texto">
                     <div class="card-body">
-                      Con tu donación de <b>$1300</b> por 6 meses, logramos
+                      Con tu donación de <b>${montos[0].thirdMonto}</b> por 6 meses, logramos
                       financiar{" "}
                       <b>
                         un curso de formación legal para referentes comunitarios
