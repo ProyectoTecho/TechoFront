@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 import "./index.css";
 import SinglePayment from "../SinglePayment/SinglePayment";
 import fotoForm from "../../assets/foto-form.jpg";
-
+import { db } from '../../firebase/firebase'
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
@@ -34,6 +34,13 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
   const dispatch = useDispatch();
 
   const [amountFlag, setAmountFlag] = useState("1000");
+
+  const [montos, setMontos] = useState("")
+
+  useEffect(() => {
+    /* cada vez que refresco la página o se actualiza un estado */
+    getMontos()
+  }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -74,11 +81,23 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
     e.target.required = true;
   };
 
+  const getMontos = async () => {
+    db
+      .collection('montos')
+      .onSnapshot((querySnapshot) => {
+        const docs = []
+        querySnapshot.forEach((doc) => {
+          docs.push({ ...doc.data(), id: doc.id })
+        });
+        setMontos(docs)
+      })
+  }
+
   const { width } = useWindowDimensions();
 
   return (
-
-    <div className="container">
+    
+    <section className="container">
       <div className="card mb-3">
         <div className="row g-0">
           <div className="col-md-4">
@@ -93,32 +112,32 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
               <form onSubmit={handleSubmit} >
                 <div className="btn-toolbar mt-3" role="toolbar">
                   <div className="btn-group me-2 mr-3" role="group">
-                    <button
+                  <button
                       name="amount"
                       type="button"
                       className="btn btn-outline-primary"
                       onClick={(handleData, toggleClass)}
-                      value={700}
+                      value={montos ? montos[0].firstMonto : 700}
                     >
-                      700 ARS
+                      {montos ? montos[0].firstMonto : 700} ARS
                     </button>
                     <button
                       name="amount"
                       type="button"
                       className="btn btn-outline-primary active"
                       onClick={(handleData, toggleClass)}
-                      value={1000}
+                      value={montos ? montos[0].secondMonto : 1000}
                     >
-                      1000 ARS
+                      {montos ? montos[0].secondMonto : 1000} ARS
                     </button>
                     <button
                       name="amount"
                       type="button"
                       className="btn btn-outline-primary"
                       onClick={(handleData, toggleClass)}
-                      value={1300}
+                      value={montos ? montos[0].thirdMonto : 1300}
                     >
-                      1300 ARS
+                      {montos ? montos[0].thirdMonto : 1300} ARS
                     </button>
                   </div>
                   <div className="input-group">
@@ -151,10 +170,10 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                     />
                   </div>
                 </div>
-                {amountFlag === "700" ? (
+                {montos && amountFlag === montos[0].firstMonto ? (
                   <div class="card border mt-3 fondo-texto">
                     <div class="card-body">
-                      Si vos y 10 personas más donan <b>$700 mensuales,</b> al
+                      Si vos y 10 personas más donan <b>${montos[0].firstMonto} mensuales,</b> al
                       cabo de un año{" "}
                       <b>
                         podemos construir <b>100 metros de veredas</b> para que
@@ -165,20 +184,20 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                     </div>
                   </div>
                 ) : null}
-                {amountFlag === "1000" ? (
+                {montos && amountFlag === montos[0].secondMonto ? (
                   <div class="card mt-3 fondo-texto">
                     <div class="card-body">
-                      Si vos y 7 personas más donan <b>$1000 mensuales,</b> al
+                      Si vos y 7 personas más donan <b>${montos[0].secondMonto} mensuales,</b> al
                       cabo de un año podemos construir{" "}
                       <b>una vivienda de emergencia</b> para una familia que lo
                       necesita.
                     </div>
                   </div>
                 ) : null}
-                {amountFlag === "1300" ? (
+                {montos && amountFlag ===  montos[0].thirdMonto ? (
                   <div class="card border mt-3 fondo-texto">
                     <div class="card-body">
-                      Con tu donación de <b>$1300</b> por 6 meses, logramos
+                      Con tu donación de <b>${montos[0].thirdMonto}</b> por 6 meses, logramos
                       financiar{" "}
                       <b>
                         un curso de formación legal para referentes comunitarios
@@ -325,7 +344,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
           </span>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

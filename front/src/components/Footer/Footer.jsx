@@ -7,7 +7,7 @@ import ModalCaptadoras from "./ModalCaptadoras";
 import ModalContacto from "./ModalContacto";
 
 let baseUrl = "http://localhost:8080/"
-if(process.env.NODE_ENV == "production") {
+if(process.env.NODE_ENV === "production") {
   baseUrl = "/"
 }
 
@@ -50,7 +50,8 @@ export default function Footer() {
   
 
   return (
-    <div className="bg-primary" id="contacto">
+    
+    <footer className="bg-primary" id="contacto">
       <div className="">
         <div className="container-fluid bg-primary">
           <div className="row">
@@ -240,6 +241,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

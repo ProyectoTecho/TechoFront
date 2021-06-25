@@ -2,13 +2,15 @@ import React from "react";
 import videoSource from "../../assets/techo-s-logo.mp4";
 import imgSource from "../../assets/construccion.jpg";
 import { Link } from "react-scroll";
+import logoTechoAzul from '../../assets/logoTechoAzul.png'
 
 import "./index.css";
 
 const BackgroundVideo = () => {
   
   return (
-    <>
+    
+    <header>
       <div className="header__video">
         <img
           src={imgSource}
@@ -30,7 +32,10 @@ const BackgroundVideo = () => {
         </video>
 
         <h1>
-          <span className="header__spanLeft"> Poné a </span> TECHO
+          <span className="header__spanLeft"> Poné a </span> 
+
+          <img className="header__image" alt="logo techo" src={logoTechoAzul} height='140'/>
+
           <span className="header__spanRight">
             en acción
             </span>{" "}
@@ -56,7 +61,7 @@ const BackgroundVideo = () => {
         </h1>
         <div></div>
       </div>
-    </>
+      </header>
   );
 };
 
