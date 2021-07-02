@@ -56,9 +56,6 @@ export default function SinglePayment() {
     });
   };
 
-  console.log(botonMP);
-  console.log(transfer, "transfer");
-
   return (
     <>
       <div className="container ">

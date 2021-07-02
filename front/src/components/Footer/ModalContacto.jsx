@@ -8,7 +8,7 @@ const ModalContacto = () => {
       <div
         className="modal fade "
         id="modalContacto"
-        tabindex="-1"
+        tabIndex="-1"
         role="dialog"
         aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true"

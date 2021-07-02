@@ -13,7 +13,7 @@ import { BannerReality } from "../Banner/BannerReality";
 import { BannerFooter } from "../Banner/BannerFooter";
 import './index.css'
 
-const Numbers = loadable(() => import("../Numbers/Numbers"))
+const NumbersPrueba = loadable(() => import("../Numbers/NumbersPrueba"))
 const MasterForm = loadable(() => import("../Form/MasterForm"))
 const Reality = loadable(() => import("../Reality/Reality"))
 
@@ -23,7 +23,7 @@ const Home = () => {
             <Navbar/>
             <Header />
             <BannerNumbers />
-            <Numbers />
+            <NumbersPrueba />
             <BannerForm />
                 <MasterForm />
             <BannerTestimony />    

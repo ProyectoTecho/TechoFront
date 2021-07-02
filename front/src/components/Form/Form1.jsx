@@ -171,8 +171,8 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                   </div>
                 </div>
                 {montos && amountFlag === montos[0].firstMonto ? (
-                  <div class="card border mt-3 fondo-texto">
-                    <div class="card-body">
+                  <div className="card border mt-3 fondo-texto">
+                    <div className="card-body">
                       Si vos y 10 personas más donan <b>${montos[0].firstMonto} mensuales,</b> al
                       cabo de un año{" "}
                       <b>
@@ -185,8 +185,8 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                   </div>
                 ) : null}
                 {montos && amountFlag === montos[0].secondMonto ? (
-                  <div class="card mt-3 fondo-texto">
-                    <div class="card-body">
+                  <div className="card mt-3 fondo-texto">
+                    <div className="card-body">
                       Si vos y 7 personas más donan <b>${montos[0].secondMonto} mensuales,</b> al
                       cabo de un año podemos construir{" "}
                       <b>una vivienda de emergencia</b> para una familia que lo
@@ -195,8 +195,8 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                   </div>
                 ) : null}
                 {montos && amountFlag ===  montos[0].thirdMonto ? (
-                  <div class="card border mt-3 fondo-texto">
-                    <div class="card-body">
+                  <div className="card border mt-3 fondo-texto">
+                    <div className="card-body">
                       Con tu donación de <b>${montos[0].thirdMonto}</b> por 6 meses, logramos
                       financiar{" "}
                       <b>
@@ -287,7 +287,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
               <div
                 className="modal fade mt-5"
                 id="exampleModalCenter"
-                tabindex="-1"
+                tabIndex="-1"
                 role="dialog"
                 aria-labelledby="exampleModalCenterTitle"
                 aria-hidden="true"

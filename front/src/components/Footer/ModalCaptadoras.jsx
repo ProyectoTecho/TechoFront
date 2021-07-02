@@ -31,7 +31,7 @@ const ModalCaptadoras = () => {
 
     return (
         <div>
-            <div className="modal fade" id="modalCaptadoras" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div className="modal fade" id="modalCaptadoras" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div className="modal-dialog">
               <div className="modal-content container-fluid ">
                 <div className="modal-header">
