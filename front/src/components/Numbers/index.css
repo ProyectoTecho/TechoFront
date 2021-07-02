@@ -10,12 +10,11 @@
 
 .numbers__textCenter {
   position: absolute;
-  bottom: 30%;
+  bottom: 20%;
+  top: 16%;
   left: 38%;
-  border: 6px solid rgb(0, 146, 221);
   width: 23vw;
-  height: 23vw;
-  border-radius: 50%;
+  margin-left: 1%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,15 +24,15 @@
     display: flex;
     justify-content: center;
     font-weight: 800;
-    font-size: 3vw;
-    color:rgb(0, 146, 221);
+    font-size: 8vw;
+    color:rgb(0, 147, 221);
 }
 
 .numbers__textCenter > h3 {
   display: flex;
   justify-content: center;
   font-weight: 800;
-  font-size: 3vw;
+  font-size: 6vw;
   color: #e66444;
 }
 
@@ -42,6 +41,7 @@
   color: black;
   text-align: center;
   font-weight: 600;
+
 }
 
 .numbers__info {
@@ -87,13 +87,17 @@
 }
 
 @media (max-width: 1030px) {
+  .numbers {
+    background-image: none;
+    margin-bottom: -30%;
+  }
  
   .numbers__info {
-    display: block;
+    display: none;
     flex-direction: column;
     width: 100%;
     justify-content: center;
-    height: 100%;
+
   }
   .numbers__num {
     font-size: 25px;
@@ -107,12 +111,8 @@
 
   .numbers__textCenter {
     border: none;
-    position: absolute;
-    bottom: 15%;
     left: 1%;
-    width: 100vw;
-    height: 15vh;
-    margin: auto;
+    position: absolute;
   }
 
   .numbers__textCenter > h2 {
@@ -139,6 +139,7 @@
 }
 
 @media (max-width: 700px) {
+
 
   .numbers__textCenter > h2 {
     font-size: 5vw;
@@ -189,5 +190,19 @@
   .numbers__items > p {
     font-size: 10px;
   }
+
+}
+
+@media (min-height: 0px) and (max-height: 600px) {
+
+  .numbers__textCenter > h2 {
+    font-size: 5vw;
+
+}
+
+.numbers__textCenter > h3 {
+  font-size: 5vw;
+
+}
 
 }
