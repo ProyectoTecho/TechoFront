@@ -5,26 +5,28 @@ import { Link } from "react-scroll";
 import "./index.css";
 import SinglePayment from "../SinglePayment/SinglePayment";
 import fotoForm from "../../assets/foto-form.jpg";
-import { db } from '../../firebase/firebase'
+import { db } from "../../firebase/firebase";
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
   return {
     width,
-    height
+    height,
   };
 }
 
 function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
 
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
     }
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return windowDimensions;
@@ -35,12 +37,13 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
 
   const [amountFlag, setAmountFlag] = useState("1000");
 
-  const [montos, setMontos] = useState("")
+  const [montos, setMontos] = useState("");
+
 
   useEffect(() => {
     /* cada vez que refresco la página o se actualiza un estado */
-    getMontos()
-  }, [])
+    getMontos();
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -82,21 +85,18 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
   };
 
   const getMontos = async () => {
-    db
-      .collection('montos')
-      .onSnapshot((querySnapshot) => {
-        const docs = []
-        querySnapshot.forEach((doc) => {
-          docs.push({ ...doc.data(), id: doc.id })
-        });
-        setMontos(docs)
-      })
-  }
+    db.collection("montos").onSnapshot((querySnapshot) => {
+      const docs = [];
+      querySnapshot.forEach((doc) => {
+        docs.push({ ...doc.data(), id: doc.id });
+      });
+      setMontos(docs);
+    });
+  };
 
   const { width } = useWindowDimensions();
 
   return (
-    
     <section className="container">
       <div className="card mb-3">
         <div className="row g-0">
@@ -109,10 +109,10 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
               <div className="mt-1">
                 <p className="card-text">Quiero donar mensualmente ...</p>
               </div>
-              <form onSubmit={handleSubmit} >
+              <form onSubmit={handleSubmit}>
                 <div className="btn-toolbar mt-3" role="toolbar">
                   <div className="btn-group me-2 mr-3" role="group">
-                  <button
+                    <button
                       name="amount"
                       type="button"
                       className="btn btn-outline-primary"
@@ -173,8 +173,9 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                 {montos && amountFlag === montos[0].firstMonto ? (
                   <div className="card border mt-3 fondo-texto">
                     <div className="card-body">
-                      Si vos y 10 personas más donan <b>${montos[0].firstMonto} mensuales,</b> al
-                      cabo de un año{" "}
+                      Si vos y 10 personas más donan{" "}
+                      <b>${montos[0].firstMonto} mensuales,</b> al cabo de un
+                      año{" "}
                       <b>
                         podemos construir <b>100 metros de veredas</b> para que
                         las personas con movilidad reducida puedan transitar por
@@ -187,18 +188,18 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                 {montos && amountFlag === montos[0].secondMonto ? (
                   <div className="card mt-3 fondo-texto">
                     <div className="card-body">
-                      Si vos y 7 personas más donan <b>${montos[0].secondMonto} mensuales,</b> al
-                      cabo de un año podemos construir{" "}
-                      <b>una vivienda de emergencia</b> para una familia que lo
-                      necesita.
+                      Si vos y 7 personas más donan{" "}
+                      <b>${montos[0].secondMonto} mensuales,</b> al cabo de un
+                      año podemos construir <b>una vivienda de emergencia</b>{" "}
+                      para una familia que lo necesita.
                     </div>
                   </div>
                 ) : null}
-                {montos && amountFlag ===  montos[0].thirdMonto ? (
+                {montos && amountFlag === montos[0].thirdMonto ? (
                   <div className="card border mt-3 fondo-texto">
                     <div className="card-body">
-                      Con tu donación de <b>${montos[0].thirdMonto}</b> por 6 meses, logramos
-                      financiar{" "}
+                      Con tu donación de <b>${montos[0].thirdMonto}</b> por 6
+                      meses, logramos financiar{" "}
                       <b>
                         un curso de formación legal para referentes comunitarios
                       </b>
@@ -207,6 +208,7 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                   </div>
                 ) : null}
                 <div className="row">
+
                   <div className="col-md-6 mt-3">
                     <label className="form-label">Mi nombre</label>
                     <input
@@ -263,10 +265,10 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                     <button
                       disabled={
                         data.name === "" ||
-                          data.lastname === "" ||
-                          data.amount === "" ||
-                          data.phone === "" ||
-                          data.email === ""
+                        data.lastname === "" ||
+                        data.amount === "" ||
+                        data.phone === "" ||
+                        data.email === ""
                           ? true
                           : false
                       }
@@ -297,7 +299,6 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
                   role="document"
                 >
                   <div className="modal-content mt-5">
-
                     <div className="modal-body">
                       <SinglePayment />
                     </div>
@@ -319,28 +320,24 @@ const Form1 = ({ handleContinuar, handleData, data }) => {
       </div>
       {/* ternario que oculta el botón si hay algún input dentro del formulario */}
       {data.name !== "" ||
-        data.lastname !== "" ||
-        data.phone !== "" ||
-        data.email !== "" ? null : (
+      data.lastname !== "" ||
+      data.phone !== "" ||
+      data.email !== "" ? null : (
         <div className="botonDona">
           <span className=" ">
-            {width > 375 ?
+            {width > 375 ? (
               <Link to="dona" offset={-50} smooth duration={1000}>
-
                 <button className="btn btnHover" type="submit">
                   <span className="letraBtn ">Doná</span>
                 </button>
-
               </Link>
-              :
+            ) : (
               <Link to="dona" offset={500} smooth duration={1000}>
-
                 <button className="btn btnHover" type="submit">
                   <span className="letraBtn ">Doná</span>
                 </button>
-
               </Link>
-            }
+            )}
           </span>
         </div>
       )}

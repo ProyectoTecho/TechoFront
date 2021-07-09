@@ -1,21 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import { postData } from "../../state/reducers/user";
-import fotoForm from "../../assets/foto-form.jpg"
-import ModalDespedida from "./ModalDespedida"
+import fotoForm from "../../assets/foto-form.jpg";
+import ModalDespedida from "./ModalDespedida";
+import { provinciasArgentinas, arrayTarjetas } from "./config";
 
-let baseUrl = "http://localhost:8080/"
-if(process.env.NODE_ENV === "production") {
-	baseUrl = "/"
+let baseUrl = "http://localhost:8080/";
+if (process.env.NODE_ENV === "production") {
+  baseUrl = "/";
 }
-
 
 const Form2 = ({ handleVolver, handleData, data }) => {
   const dispatch = useDispatch();
+  const [mapProvincias, setMapProvincias] = useState([]);
+  const [mapTarjetas, setMapTarjetas] = useState([]);
+
+  useEffect(() => {
+    setMapProvincias(provinciasArgentinas);
+    setMapTarjetas(arrayTarjetas);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     dispatch(
       postData({
         name: data.name,
@@ -80,31 +88,13 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                       className="form-select"
                       aria-label="Default select example"
                     >
-                      <option value={null}>...</option>
-                      <option value="Buenos Aires">Bs. As.</option>
-                      <option value="Catamarca">Catamarca</option>
-                      <option value="Chaco">Chaco</option>
-                      <option value="Chubut">Chubut</option>
-                      <option value="Cordoba">Cordoba</option>
-                      <option value="Corrientes">Corrientes</option>
-                      <option value="Entre Rios">Entre Rios</option>
-                      <option value="Formosa">Formosa</option>
-                      <option value="Jujuy">Jujuy</option>
-                      <option value="La Pampa">La Pampa</option>
-                      <option value="La Rioja">La Rioja</option>
-                      <option value="Islas Malvinas">Islas Malvinas</option>
-                      <option value="Mendoza">Mendoza</option>
-                      <option value="Misiones">Misiones</option>
-                      <option value="Neuquen">Neuquen</option>
-                      <option value="Rio Negro">Rio Negro</option>
-                      <option value="Salta">Salta</option>
-                      <option value="San Juan">San Juan</option>
-                      <option value="San Luis">San Luis</option>
-                      <option value="Santa Cruz">Santa Cruz</option>
-                      <option value="Santa Fe">Santa Fe</option>
-                      <option value="Sgo. del Estero">Sgo. del Estero</option>
-                      <option value="Tierra del Fuego">Tierra del Fuego</option>
-                      <option value="Tucuman">Tucuman</option>
+                      {mapProvincias?.map((item, index) => {
+                        return (
+                          <option key={index} value={item.nombre}>
+                            {item.nombre}
+                          </option>
+                        );
+                      })}
                     </select>
                   </div>
                   <div className="mb-3">
@@ -146,41 +136,13 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                       className="form-select"
                       aria-label="Default select example"
                     >
-                      <option
-                        value=""
-                        disabled=""
-                        className="_1uxfS _36dZ-"
-                      ></option>
-                      <option value="Visa Crédito" className="_1uxfS">
-                        Visa Crédito
-                      </option>
-                      <option value="Visa Débito" className="_1uxfS">
-                        Visa Débito
-                      </option>
-                      <option value="Mastercard" className="_1uxfS">
-                        Mastercard
-                      </option>
-                      <option value="American Express" className="_1uxfS">
-                        American Express
-                      </option>
-                      <option value="Cabal" className="_1uxfS">
-                        Cabal
-                      </option>
-                      <option value="Naranja" className="_1uxfS">
-                        Naranja
-                      </option>
-                      <option value="Nevada" className="_1uxfS">
-                        Nevada
-                      </option>
-                      <option value="Shopping" className="_1uxfS">
-                        Shopping
-                      </option>
-                      <option value="Nativa" className="_1uxfS">
-                        Nativa
-                      </option>
-                      <option value="Cencosud" className="_1uxfS">
-                        Cencosud
-                      </option>
+                      {mapTarjetas?.map((item, index) => {
+                        return (
+                          <option value={item.nombre} className="_1uxfS">
+                            {item.nombre}
+                          </option>
+                        );
+                      })}
                     </select>
                   </div>
 
@@ -219,7 +181,7 @@ const Form2 = ({ handleVolver, handleData, data }) => {
                       </p>
                     </div>
                   </div>
-                  <ModalDespedida name={data.name}/>
+                  <ModalDespedida name={data.name} />
                 </form>
               </div>
             </div>
